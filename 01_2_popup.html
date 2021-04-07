@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" media="(max-width: 767px)" href="res/css/mobile.css">
+    <link rel="stylesheet" media="(min-width: 768px)" href="res/css/desktop.css">
+</head>
+<body>
+<div style="position:fixed;top:0;left:0;z-index:100;">
+    <button type="button" onclick="layerPopup.show('#popup_01');" style="border:1px solid #000;background-color:#fff;color:#000;">Default</button>
+    <button type="button" onclick="layerPopup.show('#popup_01');" style="border:1px solid #000;background-color:#fff;color:#000;">input 입력 </button>
+    <button type="button" onclick="layerPopup.show('#popup_02');" style="border:1px solid #000;background-color:#fff;color:#000;">이미 사용한 번호 </button>
+    <button type="button" onclick="layerPopup.show('#popup_03');" style="border:1px solid #000;background-color:#fff;color:#000;">쿠폰번호 잘못 입력</button>
+    <button type="button" onclick="layerPopup.show('#popup_04');" style="border:1px solid #000;background-color:#fff;color:#000;">결제하기</button>
+    <button type="button" onclick="layerPopup.show('#popup_05');" style="border:1px solid #000;background-color:#fff;color:#000;">채팅</button>
+    <button type="button" onclick="layerPopup.show('#popup_06');" style="border:1px solid #000;background-color:#fff;color:#000;">구매 성공</button>	
+    <button type="button" onclick="layerPopup.show('#popup_07');" style="border:1px solid #000;background-color:#fff;color:#000;">구매 오류</button>	
+    <button type="button" onclick="layerPopup.show('#popup_08');" style="border:1px solid #000;background-color:#fff;color:#000;">유료콘서트 감상</button>	
+    <button type="button" onclick="layerPopup.show('#popup_09');" style="border:1px solid #000;background-color:#fff;color:#000;">로그인</button>
+    <button type="button" onclick="layerPopup.show('#popup_10');" style="border:1px solid #000;background-color:#fff;color:#000;">동시 접속 제한</button>
+</div>
+
+<div class="modal fadeIn" id="popup_01" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content">
+			<div class="modal_hd">쿠폰번호 입력하기</div>
+			<div class="modal_bd">
+				<p class="tit_sub">쿠폰등록</p>
+				<ul class="list_desc">
+                    <li>대소문자를 구분하여 정확하게 입력해주세요.</li>
+                    <li>유효기간이 만료된 쿠폰은 사용할 수 없습니다.</li>
+                    <li>쿠폰 등록 완료 후 쿠폰 내용에서 바로 사용할 수 있습니다.</li>
+                </ul>
+                <div class="input_wrap">
+                    <input type="text" placeholder="쿠폰번호 입력(14자리)">
+                </div>
+                
+            
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn disabled usetap" onclick="layerPopup.hide('#popup_01');"><span>Button</span></a>
+				<a href="#" class="btn disabled usetap"><span>Button</span></a>
+			</div>
+		</div>
+		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_01')">팝업닫기</button>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_02" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content">
+			<div class="modal_hd">Popup Title</div>
+			<div class="modal_bd">
+				<p class="tit_sub">Sub Title</p>
+				<p class="txt_desc">popupsampletextpopupsampletextpopupsampletextpopupsampletextpopupsampletext</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn disabled usetap" onclick="layerPopup.hide('#popup_02');"><span>Button</span></a>
+				<a href="#" class="btn disabled usetap"><span>Button</span></a>
+			</div>
+		</div>
+		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_02')">팝업닫기</button>
+	</div>
+</div>
+
+
+<script src="res/js/libs/jquery-2.2.4.min.js"></script>
+<script src="res/js/common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,3 +1,15 @@
+HTMLElement.prototype.closestOne = function (_selector) {
+    let start = this;
+    while (parent) {
+        // isMatch and isEqual?
+        const cond1 = start.parentElement ? start.parentElement.querySelector(_selector) : null;
+        const cond2 = start.matches(_selector);
+        if (cond1 && cond2) return start;
+        else if (!start.parentElement) return null;
+        start = start.parentElement;
+    }
+    return null;
+};
 var webUI = (function() {
     var timeout;
     return {

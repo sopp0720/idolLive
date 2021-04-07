@@ -16,7 +16,7 @@
         <div class="header_inner">
             <h1 class="logo"><a href="#">아이돌live</a></h1>
             <div class="util">
-                <a href="#" class="btn_login disabled usetap">로그인</a>
+                <!-- <a href="#" class="btn_login disabled usetap">로그인</a> -->
                 <a href="#" class="btn_logout usetap">로그아웃</a>
             </div>            
         </div>
@@ -29,17 +29,8 @@
                     <img src="res/images/con_sam_img_p13.png" alt="">
                 </div>
                 <div class="flex_from">
-                    <button class="btn_basic usetap" type="button"><span class="btn_txt">쿠폰번호 입력하기</span></button>
-                    <!-- <button class="btn_basic disabled usetap" type="button"><span class="btn_txt">쿠폰번호 입력하기</span></button> -->
-                </div>
-                <div class="box_coupon">
-                    <a href="#" class="btn_link usetap"><i class="icon img_coupon"></i><span class="btn_txt">쿠폰으로 영상을 구매하고 바로 감상해보세요!</span><i class="icon ic-arrow"></i></a>
-                    <!-- <a href="#" class="btn_link disabled usetap"><i class="icon img_coupon"></i><span class="btn_txt">쿠폰으로 영상을 구매하고 바로 감상해보세요!</span><i class="icon ic-arrow"></i></a> -->
-                    <ul class="list_desc sm-hidden">
-                        <li>PC에서는 Live 중 일때만 감상이 가능합니다.</li>
-                        <li>콘서트가 끝난 후 다시 보시려면 모바일에서 감상이 가능합니다.</li>
-                        <li>구매한 내역은 모바일 앱의 구매내역 메뉴에서 확인할 수 있습니다.</li>
-                    </ul>
+                    <button class="btn_basic usetap" type="button"><span class="btn_txt">보러가기</span></button>
+                    <button class="btn_basic gray usetap" type="button"><span class="btn_txt">구매취소</span></button>
                 </div>
             </div>
             <div class="col_right">
@@ -50,8 +41,8 @@
                     </div>
                     <div class="sns_area">
                         <!-- <a href="#" class="btn_comment usetap">댓글</a> -->
-                        <a href="#" class="btn_share usetap">공유하기</a>
-                        <div class="tooltip" id="tooltip1">
+                        <a href="#" class="btn_share usetap" onclick="document.getElementById('tooltip1').style.display='block';">공유하기</a>
+                        <div class="tooltip" id="tooltip1" style="display: none;">
                             <div class="tooltip_inner">
                                 <p>주소가 복사되었습니다.<br>원하는 곳에 붙여넣기 해주세요.</p>
                                 <button class="btn_tooltip_close" type="button" onclick="document.getElementById('tooltip1').style.display='none';">툴팁닫기</button>
@@ -59,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="concert_wrap">
+                <div class="concert_wrap closed">
                     <div class="concert_hd sm-hidden">
                         <p class="tit_detail">콘서트 소개</p>
                         <button class="btn_fold_non_txt" type="button" title="접기/더보기" onclick="this.closestOne('.concert_wrap').classList.toggle('closed');"><i class="icon ic-arrow-fold"></i></button>
