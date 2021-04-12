@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* skip Nav */
+#skip_nav { left: 0; top: 0; }
+#skip_nav a { font-weight: bold; font-size: 14px; position: absolute; left: -1000px; top: -1000px; width: auto; padding: 10px; background-color: black; color: #ffffff; }
+#skip_nav a:focus { left: 10px; top: 10px; }
+
 /* Common */
 .lg-hidden { display: none !important }
 
@@ -74,9 +79,42 @@
 .modal .modal_bd .box_error { margin-top: 16px; padding: 10px 0 9px; background-color: rgba(255,0,0,0.1); text-align: center; font-size: 0; }
 .modal .modal_bd .txt_box_error { position: relative; display: inline-block; padding-left: 18px; line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #ff0000; }
 .modal .modal_bd .txt_box_error:before { content: ''; position: absolute; top: 3px; left: 0; width: 13px; height: 13px; background-image: url(../images/ic-warning.png); background-size: 100%; }
+.modal .small { width: 390px; }
+.modal .small .modal_bd { padding: 30px 20px; }
+.modal .modal_bd .txt_desc { padding: 6px 0; line-height: 30px; font-size: 21px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.modal .modal_bd .tit_desc { padding-top: 2px; line-height: 30px; font-size: 21px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.modal .modal_bd .tit_desc > em { font-style: normal; color: #7e65ff; font-weight: bold; }
+.modal .modal_bd .list_desc_m { padding-top: 29px; }
+.modal .modal_bd .list_desc_m li { position: relative; margin-top: 9px; padding-left: 7px; line-height: 20px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
+.modal .modal_bd .list_desc_m li:before { content: ''; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; background-color: #000000; }
+.modal .modal_bd .list_desc_m li:first-child { margin-top: 0; }
+.modal .modal_bd .txt_desc_sub { line-height: 20px; margin-top: 29px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.modal .login { position: relative; padding: 191px 46px 40px; width: 442px; height: 600px; background-image: url(../images/img-login-bg.png); background-size: 100%; }
+.modal .login .ic_hello { position: absolute; top: 87px; left: 46px; width: 88px; height: 94px; background-image: url(../images/ic-hello.png); background-size: 100%; background-repeat: no-repeat; overflow:hidden; text-indent:-999em; }
+.modal .login .txt_login_1 { line-height: 44px; font-size: 34px; font-weight: bold; letter-spacing: -0.61px; color: #ffffff; }
+.modal .login .txt_login_1 > em { font-style: normal; font-weight: bold; color: #ffea04; }
+.modal .login .txt_login_1 > .monts { font-style: normal; font-weight: bold; color: #ffea04; font-family: 'Montserrat'; }
+.modal .login .txt_login_2 { margin-top: 11px; line-height: 20px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: rgba(255,255,255,0.57); }
+.modal .login .btn_login_wrap { font-size: 0; margin-top: 88px; }
+.modal .login .btn_phone { position: relative; display: inline-block; width: 176px; height: 120px; background-color: #feea00; padding: 75px 13px 21px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.62px; text-align: center; color: #000000; }
+.modal .login .btn_phone:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 3px solid #000000; }
+.modal .login .btn_phone:after { content: ''; position: absolute; top: 15px; left: 60px; width: 56px; height: 56px; background-image: url(../images/ic-mobile-login.png); background-size: 100%; }
+.modal .login .btn_id { position: relative; display: inline-block; margin-left: -3px; width: 177px; height: 120px; background-color: #52ffc4; padding: 75px 13px 21px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.62px; text-align: center; color: #000000; }
+.modal .login .btn_id:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 3px solid #000000; }
+.modal .login .btn_id:after { content: ''; position: absolute; top: 15px; right: 60px; width: 56px; height: 56px; background-image: url(../images/ic-u-id-login.png); background-size: 100%; }
+.modal .login .txt_login_3 { margin-top: 16px; line-height: 21px; font-size: 15px; font-weight: normal; letter-spacing: -0.54px; text-align: center; color: #ffffff; }
+.modal .modal_bd .txt_sub { line-height: 25px; font-size: 17px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.modal .modal_bd .txt_sub > em { font-style: normal; font-weight: normal; color: #644bdf; }
+.modal .modal_bd .box_device { margin-top: 30px; padding: 16px 10px 22px; background-color: #f5f5f5; }
+.modal .modal_bd .tit_device { line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #666666; }
+.modal .modal_bd .tit_device > em { font-style: normal; font-weight: normal; color: #644bdf; }
+.modal .modal_bd .list_device { margin-top: 15px; }
+.modal .modal_bd .list_device li { margin-top: 8px; line-height: 19px; font-size: 16px; font-weight: bold; letter-spacing: -0.5px; text-align: center;   color: #000000; }
+.modal .modal_bd .list_device li:first-child { margin-top: 0; }
 
 .modal .modal_ft { display: -webkit-box; display: -webkit-flex; display: flex; height: 56px; }
 .modal .modal_ft .btn { position:relative; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; padding: 13px 0 17px; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; background-color: #917bff; }
+.modal .modal_ft .btn.gray { background-color: #cccccc; }
 .modal .modal_close { position: absolute; top: 27px; right: 24px; width: 15px; height: 15px; background-image: url(../images/ic-x.png); background-size: 100%; background-repeat: no-repeat; overflow:hidden; text-indent:-999em; }
 
 /* layerPopup - payment */
@@ -100,7 +138,7 @@
 .modal .btn_detail_link.disabled { color: rgba(0,0,0,0.3); }
 .modal .btn_detail_link:hover:after { background-position: 0 50%; }
 .modal .btn_detail_link.disabled:after { background-position: 0 100%; }
-.modal .type_pur_total { border-top: 1px solid #000000; padding-top: 14px; }
+.modal .type_pur_total { margin-top: 34px; border-top: 1px solid #000000; padding-top: 14px; }
 .modal .txt_type_3 { position: relative; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
 .modal .txt_type_3 > em { margin: 5px 0 0 5px; vertical-align: top; display: inline-block; line-height: 19px; font-size: 13px; font-weight: bold; color: #999999; font-style: normal; }
 .modal .txt_type_3 .price { position: absolute; top: 3px; right: 0; line-height: 25px; font-size: 20px; font-weight: bold; letter-spacing: -0.41px; color: #000000; font-family: 'Montserrat'; }
