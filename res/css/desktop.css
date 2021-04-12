@@ -67,7 +67,7 @@
 
 .modal .modal_content {position: relative; overflow: hidden; width: 442px; max-width: 100%; background-color: #ffffff; margin: 0 auto; }
 .modal .modal_hd { padding: 20px 30px; line-height: 30px; font-size: 21px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
-.modal .modal_bd { padding: 0 30px 36px; }
+.modal .modal_bd { padding: 0 30px 36px; max-height: calc(100vh - 140px); overflow-x: hidden; overflow-y: auto; }
 .modal .modal_bd .tit_sub { word-break:keep-all; word-wrap:break-word; padding-top: 8px; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
 .modal .modal_bd .list_desc { padding-top: 8px; }
 .modal .modal_bd .list_desc li { position: relative; margin-top: 5px; padding-left: 7px; line-height: 20px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
