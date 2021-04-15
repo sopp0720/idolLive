@@ -130,7 +130,7 @@ var layerPopup = (function() {
     };
 }());
 
-
+/* 터치 효과 더미 스크립트 개발시 삭제 */
 document.addEventListener("DOMContentLoaded", function() {
     var hasTouchEvent = "ontouchstart" in document.documentElement,
         START_EV = hasTouchEvent ? "touchstart" : "mousedown",
@@ -157,18 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/* 더미 스크립트 */
-function horCk() {
-    var orientation = window.orientation;
-    var liveArea = document.getElementsByClassName('live_video').length;
-    if (orientation == 90 && liveArea == 1){
-        document.documentElement.classList.add('horizontal_ui');
-    }
-    if (orientation == 90 && liveArea == 0) {
-        document.getElementById('container').classList.add('iptv');
-    }
-}
-horCk();
 
 
 
