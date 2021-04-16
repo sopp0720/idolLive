@@ -116,7 +116,7 @@
 .modal .modal_ft .btn { position:relative; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; padding: 13px 0 17px; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; background-color: #917bff; }
 .modal .modal_ft .btn.gray { background-color: #cccccc; }
 .modal .modal_close { position: absolute; top: 27px; right: 24px; width: 15px; height: 15px; background-image: url(../images/ic-popup-exit.png); background-size: 100%; background-repeat: no-repeat; overflow:hidden; text-indent:-999em; }
-.modal .login + .modal_close { background-image: url(../images/ic-popup-exit-white.png); }
+.modal .login ~ .modal_close { background-image: url(../images/ic-popup-exit-white.png); }
 
 /* layerPopup - payment */
 .modal .tit_pur { padding: 14px 0 6px; line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
@@ -150,6 +150,7 @@
 
 #wrap { padding-bottom: 140px; }
 #header { height: 60px; }
+#header.bg_player { background-color: #f5f5f5; }
 .header_inner { position: relative; width: 1024px; height: 60px; margin: 0 auto; }
 .header_inner .logo { position: absolute; top: 18px; left: 0; }
 .header_inner .logo > a { width: 122px; height: 22px; display: block; background-image: url(../images/logo_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }

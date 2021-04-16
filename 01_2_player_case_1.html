@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" media="(max-width: 767px)" href="res/css/mobile.css">
+    <link rel="stylesheet" media="(min-width: 768px)" href="res/css/desktop.css">
+</head>
+<body>
+<div id="skip_nav">
+    <a href="#header">주 메뉴 바로 가기</a>
+    <a href="#container">본문 바로 가기</a>
+</div>
+<div id="wrap">
+	<div id="header" class="sm-hidden">
+        <div class="header_inner">
+            <h1 class="logo"><a href="#">아이돌live</a></h1>
+            <div class="util">
+                <!-- <a href="#" class="btn_login disabled usetap">로그인</a> -->
+                <a href="#" class="btn_logout usetap">로그아웃</a>
+            </div>            
+        </div>
+    </div>
+	<div id="container">
+		<div class="content">
+            <div class="live_wrap">
+                <div class="col_player">
+                    <div class="player"></div>
+                    <div class="detail">
+                        <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
+                        <p class="time">2021.04.26 (목) 19:00</p>
+                    </div>
+                    <div class="heart">하트 영역</div>
+                </div>
+                <div class="col_chat">
+                    <div class="chat_wrap">
+                        <div class="chat_inner">
+                            <div class="scroll_bottom">
+                                <div class="msg_wrap">
+                                    <div class="welcome">채팅에 참여하셨습니다</div>
+                                </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리부터 발끝까지 완벽해</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap right">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리부터 발끝까지 완벽해</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ic_chat_down usetap" onclick="document.querySelector('.chat_inner').scrollTop = (document.querySelector('.chat_inner').scrollHeight - document.querySelector('.chat_inner').offsetHeight);"></div>
+                        <div class="chat_btm">
+                            <div class="chat_input">
+                                <div class="textarea_wrap">
+                                    <textarea rows="4" id="origin" class="textarea" placeholder="응원 댓글을 남겨주세요"></textarea>
+                                    <textarea id="dummy" class="dummy" disabled=""></textarea>
+                                </div>
+                            </div>
+                            <span class="ic_chat_send usetap"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+	</div>
+	<!-- Footer -->
+    <div id="footer">
+        <div class="footer_inner">
+            <ul class="list_policy">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년보호정책</a></li>
+                <li><a href="#">이용자피해예방가이드</a></li>
+                <li><a href="#">미환급금조회</a></li>
+                <li><a href="#">명의도용방지서비스</a></li>
+                <li><a href="#">장애현황</a></li>
+                <li><a href="#">U+알뜰폰 파트너스 홈페이지</a></li>
+            </ul>
+            <address>
+                <p><span>주소 서울특별시 용산구 한강대로 32</span><span>대표이사 하현회</span><span>사업자등록번호 220-81-39938</span><span> 통신판매신고 제 2015-서울용산-00481호</span><span>사업자정보확인</span></p>
+                <p><span>고객센터  휴대폰 114(무료), 1544-0010(유료)</span><span>인터넷, IPTV, 전화 101(무료)</span><span>U+shop 휴대폰 1644-7009(유료), 인터넷/IPTV 1644-7070(유료), 스마트홈 1544-0107(유료)</span></p>
+            </address>
+            <p class="copyright">Copyright © LG Uplus Corp. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+<script src="res/js/common.js"></script>
+
+</body>
+</html>
