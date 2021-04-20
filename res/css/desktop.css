@@ -265,7 +265,9 @@
 .player_wrap .txt_non_video_2 { margin-top: 9px; line-height: 20px; font-size: 15px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #eaeaea; }
 .player_wrap .link_gohome { margin-top: 22px; display: inline-block; padding: 8px 22px 11px 25px; }
 .player_wrap .link_gohome .txt { position: relative; padding-right: 13px; line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: #52ffc4; }
+.player_wrap .link_gohome:hover .txt { color: #caffed; }
 .player_wrap .link_gohome .txt:after { content: ''; position: absolute; top: 5px; right: 0; width: 10px; height: 15px; background-image: url(../images/ic-arrow-green-nor.png); background-size: 100%; }
+.player_wrap .link_gohome:hover .txt:after { background-position: 0 50%; }
 .player_wrap .ctrl_wrap { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); text-align: center; white-space: nowrap; }
 .player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); opacity: 0.6; }
 .player_wrap .ctrl_wrap:after {content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
@@ -292,6 +294,16 @@
 .col_player .detail .title { line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .col_player .detail .tg_live { margin-top: 8px; margin-right: 8px; vertical-align: top; display: inline-block; width: 45px; height: 22px; background-image: url(../images/img-tag-live.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .col_player .detail .time { line-height: 20px; margin-top: 9px; font-family: 'Montserrat'; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; color: #000000; }
+
+/* Full Player */
+.fullplayer .player_wrap { position: fixed; top: 0; left: 0; width: 100%; z-index: 10; }
+.fullplayer #header,
+.fullplayer #footer,
+.fullplayer .col_chat,
+.fullplayer .col_player .detail,
+.fullplayer .artist_wrap { display: none; }
+/* chat */
+
 .col_chat { width: 244px; }
 .chat_wrap { position: relative; width: 100%; height: 539px; border: 1px solid #dddddd; }
 .chat_wrap .chat_hd { padding: 10px 12px 11px; border-bottom: 1px solid #dddddd;  }
@@ -312,7 +324,8 @@
 .chat_wrap .right .user { line-height: 16px; font-size: 11px; font-weight: bold; letter-spacing: -0.46px; color: #ffffff; }
 .chat_wrap .left .comment { margin-top: 4px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #000000; word-break: break-all; word-wrap: break-word; }
 .chat_wrap .right .comment { margin-top: 4px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #ffffff; word-break: break-all; word-wrap: break-word; }
-.chat_wrap .btn_chat_down { position: absolute; bottom: 51px; right: 11px; width: 26px; height: 26px; box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12); background-color: #ffffff; background-image: url(../images/btn_chat_down.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.chat_wrap .btn_chat_down { position: absolute; bottom: 51px; right: 11px; width: 26px; height: 26px; box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12); background-color: #ffffff; background-image: url(../images/btn_chat_down.png); background-size: 10px 11px; background-repeat: no-repeat; background-position: 50% 50%; overflow: hidden; text-indent: -9999em; }
+.chat_wrap .btn_chat_down:hover { background-color: #dddddd; }
 .chat_wrap .chat_btm { position: relative; width: 100%; height: 40px; padding: 9px 40px 9px 12px; border-top: 1px solid #dddddd; }
 .chat_wrap .textarea { position: relative; width: 100%; height: 17px; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; overflow-y: auto; overflow-x: hidden; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family:"Noto Sans KR"; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
 .chat_wrap .textarea::-webkit-input-placeholder { color: #999999 !important; }
