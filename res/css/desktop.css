@@ -257,9 +257,18 @@
 .col_player { width: 780px; padding-right: 20px; border-bottom: 1px solid #dddddd; }
 .player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; }
 .player_wrap video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.player_wrap .non_video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #644bdf; text-align: center; }
+.player_wrap .non_video:after {content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.player_wrap .img_non_video { position: relative; width: 100px; height: 100px; overflow: hidden; display: block; margin: 0 auto; }
+.player_wrap .img_non_video > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.player_wrap .txt_non_video_1 { margin-top: 20px; line-height: 27px; font-size: 19px; font-weight: bold; text-align: center; color: #ffffff; }
+.player_wrap .txt_non_video_2 { margin-top: 9px; line-height: 20px; font-size: 15px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #eaeaea; }
+.player_wrap .link_gohome { margin-top: 22px; display: inline-block; padding: 8px 22px 11px 25px; }
+.player_wrap .link_gohome .txt { position: relative; padding-right: 13px; line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: #52ffc4; }
+.player_wrap .link_gohome .txt:after { content: ''; position: absolute; top: 5px; right: 0; width: 10px; height: 15px; background-image: url(../images/ic-arrow-green-nor.png); background-size: 100%; }
 .player_wrap .ctrl_wrap { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); text-align: center; white-space: nowrap; }
 .player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); opacity: 0.6; }
-.player_wrap .ctrl_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.player_wrap .ctrl_wrap:after {content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .player_wrap .center_area { position: relative; display: inline-block; vertical-align: middle; white-space: normal; }
 .player_wrap .bottom_area { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 58px 18px 62px; }
 .player_wrap .playerbar_wrap { position: relative; width: 100%; height: 22px; padding: 9px 0; }
@@ -276,7 +285,7 @@
 .volumebar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); bottom:0; left: 0; width: 100%; height: 0; background-color: #917bff; }
 .volumebar_wrap .timeBar_handle { position: absolute; right: -3px; top: -3px; width: 10px; height: 10px; background-color: #917bff; border-radius: 100%; cursor: pointer; }
 .player_wrap .btn_magnify { position: absolute; bottom: 20px; right: 20px; }
-.player_wrap .heart_wrap { position: absolute; bottom: -83px; right: 8px; width: 73px; height: 132px; }
+.player_wrap .heart_wrap { position: absolute; bottom: -83px; right: 8px; width: 73px; }
 .heart_wrap .btn_heart { position: absolute; bottom: 20px; left: 0; right: 0; margin: 0 auto; }
 .heart_wrap .txt_hit { position: absolute; bottom: 0; left: 0; right: 0; line-height: 15px; font-family: 'Montserrat'; font-size: 12px; font-weight: 500; text-align: center; color: #000000; }
 .col_player .detail { height: 111px; padding-top: 23px; padding-right: 100px; }
@@ -288,7 +297,7 @@
 .chat_wrap .chat_hd { padding: 10px 12px 11px; border-bottom: 1px solid #dddddd;  }
 .chat_wrap .txt_number { line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.43px; color: #000000; }
 .chat_wrap .txt_number > em { font-style: normal; color: #7e65ff; font-weight: 500; letter-spacing: -0.46px; }
-.chat_wrap .chat_inner { position: relative; width: 100%; height: 459px; white-space: nowrap; overflow-y: auto; overflow-x: hidden; }
+.chat_wrap .chat_inner { position: relative; width: 100%; height: 459px; white-space: nowrap; overflow-y: auto; overflow-x: hidden; background-color: #f5f5f6; }
 .chat_wrap .chat_inner:after{ content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .chat_wrap .scroll_bottom { width: 100%; padding: 14px 13px; display: inline-block; vertical-align: bottom; white-space: normal; }
 
@@ -297,8 +306,8 @@
 .chat_wrap .msg_wrap.right { text-align: right; }
 .chat_wrap .msg_wrap .welcome { position: relative; display: inline-block; padding: 0 0 5px 16px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #999999; }
 .chat_wrap .msg_wrap .welcome:before { content: ''; position: absolute; top: 3px; left: 0; width: 13px; height: 13px; background-image: url(../images/ic-welcome.png); background-size: 100%; }
-.chat_wrap .left .msg { display: inline-block; max-width: calc(100% - 30px); padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; text-align: left; border: 1px solid #dddddd; }
-.chat_wrap .right .msg { display: inline-block; padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; text-align: left; border: 1px solid #644bdf; background-color: #644bdf; }
+.chat_wrap .left .msg { display: inline-block; max-width: calc(100% - 30px); padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; text-align: left; border: 1px solid #dddddd; background-color: #ffffff; }
+.chat_wrap .right .msg { display: inline-block; max-width: calc(100% - 30px); padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; text-align: left; border: 1px solid #644bdf; background-color: #644bdf; }
 .chat_wrap .left .user { line-height: 16px; font-size: 11px; font-weight: bold; letter-spacing: -0.46px; color: #000000; }
 .chat_wrap .right .user { line-height: 16px; font-size: 11px; font-weight: bold; letter-spacing: -0.46px; color: #ffffff; }
 .chat_wrap .left .comment { margin-top: 4px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #000000; word-break: break-all; word-wrap: break-word; }
