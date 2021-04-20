@@ -29,15 +29,49 @@
 		<div class="content">
             <div class="live_wrap">
                 <div class="col_player">
-                    <div class="player"></div>
+                    <div class="player_wrap">
+                        <video id="video1" width="100%" height="100%">
+                            <source src="mov_bbb.mp4" type="video/mp4">
+                        </video>
+                        <div class="ctrl_wrap">
+                            <div class="center_area">
+                                <button class="btn_play" type="button" onclick="this.classList.toggle('on');">play/pause</button>
+                            </div>
+                            <div class="bottom_area">
+                                <div class="volume_wrap">
+                                    <button class="btn_speaker" type="button">
+                                        <i class="ic_speaker"></i>
+                                        <div class="volumebar_wrap">
+                                            <div class="progressBar">
+                                                <div class="timeBar" style="height:40%;"><div class="timeBar_handle"></div></div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="playerbar_wrap">
+                                    <div class="progressBar">
+                                        <div class="timeBar" style="width:18%;"><div class="timeBar_handle"></div></div>
+                                    </div>			
+                                </div>
+                                <button class="btn_magnify" type="button">magnify</button>
+                            </div>
+                        </div>
+                        <div class="heart_wrap">
+                            <button class="btn_heart" type="button" onclick="#"><i class="ic_heart">하트날리기</i></button>
+                            <div class="txt_hit">2,380,001</div>
+                        </div>
+                    </div>
                     <div class="detail">
                         <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
                         <p class="time">2021.04.26 (목) 19:00</p>
                     </div>
-                    <div class="heart">하트 영역</div>
+                    
                 </div>
                 <div class="col_chat">
                     <div class="chat_wrap">
+                        <div class="chat_hd">
+                            <p class="txt_number">참여자 <em>25</em></p>
+                        </div>
                         <div class="chat_inner">
                             <div class="scroll_bottom">
                                 <div class="msg_wrap">
@@ -49,30 +83,145 @@
                                         <div class="comment">머리부터 발끝까지 완벽해</div>
                                     </div>
                                 </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">3333</div>
+                                        <div class="comment">두줄aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                                    </div>
+                                </div>
                                 <div class="msg_wrap right">
                                     <div class="msg">
                                         <div class="user">bourbon</div>
                                         <div class="comment">머리부터 발끝까지 완벽해</div>
                                     </div>
                                 </div>
+                                <div class="msg_wrap right">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리</div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
-                        <div class="ic_chat_down usetap" onclick="document.querySelector('.chat_inner').scrollTop = (document.querySelector('.chat_inner').scrollHeight - document.querySelector('.chat_inner').offsetHeight);"></div>
+                        <button class="btn_chat_down" type="button" onclick="document.querySelector('.chat_inner').scrollTop = (document.querySelector('.chat_inner').scrollHeight - document.querySelector('.chat_inner').offsetHeight);">최근메시지</button>
                         <div class="chat_btm">
                             <div class="chat_input">
-                                <div class="textarea_wrap">
-                                    <textarea rows="4" id="origin" class="textarea" placeholder="응원 댓글을 남겨주세요"></textarea>
-                                    <textarea id="dummy" class="dummy" disabled=""></textarea>
-                                </div>
+                                <textarea rows="1" class="textarea" placeholder="실시간 대화에 참여해보세요"></textarea>
                             </div>
-                            <span class="ic_chat_send usetap"></span>
+                            <button class="btn_chat_send" type="button">보내기</button>
                         </div>
                     </div>
 
                 </div>
             </div>
-            
+            <div class="artist_wrap">
+                <div class="artist_hd">
+                    <p class="tit_detail">출연자 정보</p>
+                    <button class="btn_fold_non_txt" type="button" title="접기/더보기" onclick="this.closestOne('.artist_wrap').classList.toggle('closed');"><i class="icon ic-arrow-fold"></i></button>
+                </div>
+                <div class="list_artist">
+                    <ul>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>                        
+                    </ul>
+                </div>
 
+            </div>
         </div>
 	</div>
 	<!-- Footer -->
@@ -97,6 +246,53 @@
     </div>
 </div>
 <script src="res/js/common.js"></script>
+
+<!-- 더미스크립트 -->
+<script>
+var timeDrag = false;
+var endDrag = null;
+var mouseDrag = false;
+var hasTouchEvent = "ontouchstart" in document.documentElement,
+    START_EV = hasTouchEvent ? "touchstart" : "mousedown",
+    MOVE_EV = hasTouchEvent ? "touchmove" : "mousemove",
+    END_EV = hasTouchEvent ? "touchend" : "mouseup";
+
+var progress_1 = document.querySelector('.playerbar_wrap');
+
+progress_1.addEventListener(START_EV, function (e) {
+    timeDrag = true;
+    mouseDrag = true;
+	endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
+});
+progress_1.addEventListener(MOVE_EV, function (e) {
+	e.preventDefault();
+    if (mouseDrag == false){
+        return;
+    }
+    endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
+	updatebar(endDrag);
+});
+progress_1.addEventListener(END_EV, function (e) {
+    mouseDrag = false;
+    if(timeDrag) {
+		updatebar(endDrag);
+    }
+});
+
+var updatebar = function(x) {
+	var progress = progress_1.querySelector('.progressBar');
+	var position = x - progress.getBoundingClientRect().left;
+	var percentage = 100 * position / progress.getBoundingClientRect().width;
+	if(percentage > 100) {
+		percentage = 100;
+	}
+	if(percentage < 0) {
+		percentage = 0;
+	}
+    progress_1.querySelector('.timeBar').style.width = percentage+'%';
+};
+</script>
+<!-- 더미스크립트 -->
 
 </body>
 </html>

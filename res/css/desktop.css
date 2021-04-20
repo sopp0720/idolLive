@@ -149,8 +149,7 @@
 
 
 #wrap { padding-bottom: 140px; }
-#header { height: 60px; }
-#header.bg_player { background-color: #f5f5f5; }
+#header { height: 60px; background-color: #f5f5f5; }
 .header_inner { position: relative; width: 1024px; height: 60px; margin: 0 auto; }
 .header_inner .logo { position: absolute; top: 18px; left: 0; }
 .header_inner .logo > a { width: 122px; height: 22px; display: block; background-image: url(../images/logo_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
@@ -241,6 +240,91 @@
 .concert_wrap .btn_detail_link.disabled { color: rgba(0,0,0,0.3); }
 .concert_wrap .btn_detail_link:hover:after { background-position: 0 50%; }
 .concert_wrap .btn_detail_link.disabled:after { background-position: 0 100%; }
+
+/* Mini Player icon */
+.player_wrap .btn_play { width: 100px; height: 100px; background-image: url(../images/ic_play_pause_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.player_wrap .btn_play:hover { background-position: 0 33.333333%; }
+.player_wrap .btn_play.on { background-position: 0 66.666667%; }
+.player_wrap .btn_play.on:hover { background-position: 0 100%; }
+.player_wrap .btn_speaker .ic_speaker { display: block; width: 24px; height: 24px; background-image: url(../images/ic_speaker_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.player_wrap .btn_speaker:hover .ic_speaker { background-position: 0 100%; }
+.player_wrap .btn_magnify { width:24px; height: 24px; background-image: url(../images/ic_magnify_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.player_wrap .btn_magnify:hover { background-position: 0 100%; }
+.player_wrap .ic_heart { display: block; width: 40px; height: 40px; background-image: url(../images/icon-heart.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+
+/* Mini Player */
+.live_wrap { margin-top: 30px; display: inline-block; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; }
+.col_player { width: 780px; padding-right: 20px; border-bottom: 1px solid #dddddd; }
+.player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; }
+.player_wrap video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.player_wrap .ctrl_wrap { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); text-align: center; white-space: nowrap; }
+.player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); opacity: 0.6; }
+.player_wrap .ctrl_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.player_wrap .center_area { position: relative; display: inline-block; vertical-align: middle; white-space: normal; }
+.player_wrap .bottom_area { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 58px 18px 62px; }
+.player_wrap .playerbar_wrap { position: relative; width: 100%; height: 22px; padding: 9px 0; }
+.playerbar_wrap .progressBar { position: relative; width: 100%; height: 4px; background-color: rgba(255,255,255,0.5); }
+.playerbar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); top: 0; left: 0; width: 0; height: 100%; background-color: #917bff; }
+.playerbar_wrap .timeBar_handle { position: absolute; right: -9px; top: -9px; width: 22px; height: 22px; cursor: pointer; }
+.playerbar_wrap .timeBar_handle:before { content: ''; position: absolute; width: 18px; height: 18px; top: 2px; left: 2px; background-color: #917bff; border-radius: 100%; }
+.playerbar_wrap .timeBar_handle:after { content: ''; position: absolute; width: 8px; height: 8px; top: 7px; left: 7px; background-color: #ffffff; border-radius: 100%; }
+.player_wrap .volume_wrap { position: absolute; bottom: 18px; left: 24px; width: 24px; }
+.player_wrap .btn_speaker { padding-top: 6px; }
+.player_wrap .volumebar_wrap { bottom: 30px; left: 0; position: absolute; width: 10px; padding: 0 10px; height: 60px; display: none; }
+.player_wrap .btn_speaker:hover .volumebar_wrap { display: block; }
+.volumebar_wrap .progressBar { position: relative; width: 4px; height: 100%; background-color: #8f98a7; }
+.volumebar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); bottom:0; left: 0; width: 100%; height: 0; background-color: #917bff; }
+.volumebar_wrap .timeBar_handle { position: absolute; right: -3px; top: -3px; width: 10px; height: 10px; background-color: #917bff; border-radius: 100%; cursor: pointer; }
+.player_wrap .btn_magnify { position: absolute; bottom: 20px; right: 20px; }
+.player_wrap .heart_wrap { position: absolute; bottom: -83px; right: 8px; width: 73px; height: 132px; }
+.heart_wrap .btn_heart { position: absolute; bottom: 20px; left: 0; right: 0; margin: 0 auto; }
+.heart_wrap .txt_hit { position: absolute; bottom: 0; left: 0; right: 0; line-height: 15px; font-family: 'Montserrat'; font-size: 12px; font-weight: 500; text-align: center; color: #000000; }
+.col_player .detail { height: 111px; padding-top: 23px; padding-right: 100px; }
+.col_player .detail .title { line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col_player .detail .tg_live { margin-top: 8px; margin-right: 8px; vertical-align: top; display: inline-block; width: 45px; height: 22px; background-image: url(../images/img-tag-live.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.col_player .detail .time { line-height: 20px; margin-top: 9px; font-family: 'Montserrat'; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; color: #000000; }
+.col_chat { width: 244px; }
+.chat_wrap { position: relative; width: 100%; height: 539px; border: 1px solid #dddddd; }
+.chat_wrap .chat_hd { padding: 10px 12px 11px; border-bottom: 1px solid #dddddd;  }
+.chat_wrap .txt_number { line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.43px; color: #000000; }
+.chat_wrap .txt_number > em { font-style: normal; color: #7e65ff; font-weight: 500; letter-spacing: -0.46px; }
+.chat_wrap .chat_inner { position: relative; width: 100%; height: 459px; white-space: nowrap; overflow-y: auto; overflow-x: hidden; }
+.chat_wrap .chat_inner:after{ content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.chat_wrap .scroll_bottom { width: 100%; padding: 14px 13px; display: inline-block; vertical-align: bottom; white-space: normal; }
+
+.chat_wrap .msg_wrap { position: relative; padding-top: 8px; text-align: center; font-size: 0; }
+.chat_wrap .msg_wrap.left { text-align: left; }
+.chat_wrap .msg_wrap.right { text-align: right; }
+.chat_wrap .msg_wrap .welcome { position: relative; display: inline-block; padding: 0 0 5px 16px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #999999; }
+.chat_wrap .msg_wrap .welcome:before { content: ''; position: absolute; top: 3px; left: 0; width: 13px; height: 13px; background-image: url(../images/ic-welcome.png); background-size: 100%; }
+.chat_wrap .left .msg { display: inline-block; max-width: calc(100% - 30px); padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; text-align: left; border: 1px solid #dddddd; }
+.chat_wrap .right .msg { display: inline-block; padding: 4px 11px 9px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; text-align: left; border: 1px solid #644bdf; background-color: #644bdf; }
+.chat_wrap .left .user { line-height: 16px; font-size: 11px; font-weight: bold; letter-spacing: -0.46px; color: #000000; }
+.chat_wrap .right .user { line-height: 16px; font-size: 11px; font-weight: bold; letter-spacing: -0.46px; color: #ffffff; }
+.chat_wrap .left .comment { margin-top: 4px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #000000; word-break: break-all; word-wrap: break-word; }
+.chat_wrap .right .comment { margin-top: 4px; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #ffffff; word-break: break-all; word-wrap: break-word; }
+.chat_wrap .btn_chat_down { position: absolute; bottom: 51px; right: 11px; width: 26px; height: 26px; box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12); background-color: #ffffff; background-image: url(../images/btn_chat_down.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.chat_wrap .chat_btm { position: relative; width: 100%; height: 40px; padding: 9px 40px 9px 12px; border-top: 1px solid #dddddd; }
+.chat_wrap .textarea { position: relative; width: 100%; height: 17px; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; overflow-y: auto; overflow-x: hidden; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family:"Noto Sans KR"; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
+.chat_wrap .textarea::-webkit-input-placeholder { color: #999999 !important; }
+.chat_wrap .btn_chat_send { position: absolute; top: 10px; right: 11px; width: 20px; height: 20px; background-image: url(../images/btn_chat_send.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+
+.artist_wrap { margin-top: 32px; width: 760px; }
+.artist_wrap .artist_hd  { position: relative; height: 45px; padding: 0 28px 14px 0; border-bottom: 2px solid #000000; }
+.artist_wrap .tit_detail { line-height: 29px; font-size: 20px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
+.artist_wrap .btn_fold_non_txt { position: absolute; top: 6px; right: 0; width: 28px; height: 28px; background-image: url(../images/ic-arrow-fold_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.artist_wrap.closed .btn_fold_non_txt { transform: rotate(180deg); }
+.artist_wrap.closed .list_artist { overflow: hidden; height: 196px; }
+.list_artist ul { margin: 0 -21px; }
+.list_artist ul:after { clear: both; content: ''; display: block; }
+.list_artist ul li { float: left; width: 16.6666%; padding: 0 21px 14px; margin-top: 24px; }
+.list_artist .img_artist { position: relative; width: 100%; padding-top: 100%; border-radius: 50%; overflow: hidden; }
+.list_artist .img_artist img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.list_artist .txt_artist { margin-top: 8px; line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.list_artist .txt_song { margin-top: 5px; height: 32px; line-height: 16px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: rgba(0,0,0,0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; word-break: keep-all; word-wrap: break-word; }
+
+
+
 
 
 /*******************************************************************************************/
