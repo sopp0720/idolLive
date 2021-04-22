@@ -27,6 +27,22 @@
 	<div id="container">
         <div class="visual_bg" style="background-image:url(res/images/con_sam_img_p13.png)"></div>
 		<div class="content">
+            <div class="title_wrap">
+                <div class="middle_inner">
+                    <h3 class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</h3>
+                    <p class="time"><span class="tg_live">Live</span>2021.03.03 19:00</p>
+                </div>
+                <div class="sns_area">
+                    <!-- <a href="#" class="btn_comment usetap">댓글</a> -->
+                    <a href="#" class="btn_share usetap" onclick="document.getElementById('tooltip1').style.display='block';">공유하기</a>
+                    <div class="tooltip" id="tooltip1" style="display: none;">
+                        <div class="tooltip_inner">
+                            <p>주소가 복사되었습니다.<br>원하는 곳에 붙여넣기 해주세요.</p>
+                            <button class="btn_tooltip_close" type="button" onclick="document.getElementById('tooltip1').style.display='none';">툴팁닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col_left">
                 <div class="cover">
                     <img src="res/images/con_sam_img_p13.png" alt="">
@@ -36,22 +52,6 @@
                 </div>
             </div>
             <div class="col_right">
-                <div class="title_wrap">
-                    <div class="middle_inner">
-                        <h3 class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</h3>
-                        <p class="time"><span class="tg_live">Live</span>2021.03.03 19:00</p>
-                    </div>
-                    <div class="sns_area">
-                        <!-- <a href="#" class="btn_comment usetap">댓글</a> -->
-                        <a href="#" class="btn_share usetap" onclick="document.getElementById('tooltip1').style.display='block';">공유하기</a>
-                        <div class="tooltip" id="tooltip1" style="display: none;">
-                            <div class="tooltip_inner">
-                                <p>주소가 복사되었습니다.<br>원하는 곳에 붙여넣기 해주세요.</p>
-                                <button class="btn_tooltip_close" type="button" onclick="document.getElementById('tooltip1').style.display='none';">툴팁닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="concert_wrap closed">
                     <div class="concert_hd sm-hidden">
                         <p class="tit_detail">콘서트 소개</p>

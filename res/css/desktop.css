@@ -182,6 +182,28 @@
 .visual_bg:after { content: ''; position: absolute; width: 100%; height: 260px; overflow: hidden; background-image: inherit; background-position: 50% 50%; background-size: cover; opacity: 0.5; -webkit-filter: blur(20px); filter: blur(20px); }
 #container .content { position: relative; width: 1024px; margin: 0 auto; }
 #container .content:after { clear: both; content: ''; display: block; }
+.title_wrap { position: relative; float: right; width: 694px; height: 260px; white-space: nowrap; }
+.title_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.title_wrap .middle_inner { position: relative; width: 547px; text-align: left; display: inline-block; vertical-align: middle; white-space: normal; }
+.title_wrap .title { margin-top: 30px; line-height: 61px; font-size: 42px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; }
+.title_wrap .time { margin-top: 17px; line-height: 30px; font-size: 21px; font-weight: 500; letter-spacing: -0.5px; color: rgba(238,238,238,0.6); }
+.title_wrap .time .tg_live { vertical-align: top; display: inline-block; margin: 5px 20px 0 0; width: 45px; height: 22px; padding: 2px 0; line-height: 18px; font-family: Montserrat; font-size: 14px; font-weight: 800; text-align: center; color: #000000; background-color: #ef4847; }
+
+.title_wrap .sns_area { position: absolute; bottom: 45px; right: 0; }
+.title_wrap .sns_area .btn_share { float: left; position: relative; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/btn_share_lg.png); background-size: 100%; }
+.title_wrap .sns_area .btn_share:hover { background-position: 0 50%; }
+.title_wrap .sns_area .btn_share.disabled { background-position: 0 100%; }
+.title_wrap .sns_area .btn_comment { float: left; position: relative; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/btn_share_lg.png); background-size: 100%; }
+.title_wrap .sns_area .btn_comment:hover { background-position: 0 50%; }
+.title_wrap .sns_area .btn_comment.disabled { background-position: 0 100%; }
+
+.title_wrap .sns_area .tooltip { position: absolute; right: 0; top: 40px; z-index: 2; }
+.title_wrap .sns_area .tooltip_inner { background-color: #ffffff; text-align: left; padding: 8px 13px; border: 2px solid #000000; }
+.title_wrap .sns_area .tooltip_inner:before {content: ''; position: absolute; top: 0; right: 10px; margin-top: -12px; border-width: 6px; border-style: solid; border-color: transparent transparent #000 transparent; }
+.title_wrap .sns_area .tooltip_inner:after {content: ''; position: absolute; top: 0; right: 10px; margin-top: -9px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; }
+.title_wrap .sns_area .tooltip_inner > p { line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
+.title_wrap .sns_area .tooltip_inner .btn_tooltip_close { position: absolute; top: 9px; right: 9px; width: 14px; height: 14px; background-image: url(../images/ic-x.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+
 .col_left { float: left; width: 290px; }
 .col_left .cover { margin-top: 80px; position: relative; width: 290px; height: 413px; overflow: hidden; }
 .col_left .cover img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -193,27 +215,6 @@
 .col_left .list_desc li:first-child { margin-top: 0; }
 
 .col_right { float: right; width: 694px; }
-.col_right .title_wrap { position: relative; width: 100%; height: 260px; white-space: nowrap; }
-.col_right .title_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.col_right .title_wrap .middle_inner { position: relative; width: 547px; text-align: left; display: inline-block; vertical-align: middle; white-space: normal; }
-.col_right .title_wrap .title { margin-top: 30px; line-height: 61px; font-size: 42px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; }
-.col_right .title_wrap .time { margin-top: 17px; line-height: 30px; font-size: 21px; font-weight: 500; letter-spacing: -0.5px; color: rgba(238,238,238,0.6); }
-.col_right .title_wrap .time .tg_live { vertical-align: top; display: inline-block; margin: 5px 20px 0 0; width: 45px; height: 22px; padding: 2px 0; line-height: 18px; font-family: Montserrat; font-size: 14px; font-weight: 800; text-align: center; color: #000000; background-color: #ef4847; }
-
-.col_right .sns_area { position: absolute; bottom: 45px; right: 0; }
-.col_right .sns_area .btn_share { float: left; position: relative; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/btn_share_lg.png); background-size: 100%; }
-.col_right .sns_area .btn_share:hover { background-position: 0 50%; }
-.col_right .sns_area .btn_share.disabled { background-position: 0 100%; }
-.col_right .sns_area .btn_comment { float: left; position: relative; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/btn_share_lg.png); background-size: 100%; }
-.col_right .sns_area .btn_comment:hover { background-position: 0 50%; }
-.col_right .sns_area .btn_comment.disabled { background-position: 0 100%; }
-
-.col_right .sns_area .tooltip { position: absolute; right: 0; top: 40px; z-index: 2; }
-.col_right .sns_area .tooltip_inner { background-color: #ffffff; text-align: left; padding: 8px 13px; border: 2px solid #000000; }
-.col_right .sns_area .tooltip_inner:before {content: ''; position: absolute; top: 0; right: 10px; margin-top: -12px; border-width: 6px; border-style: solid; border-color: transparent transparent #000 transparent; }
-.col_right .sns_area .tooltip_inner:after {content: ''; position: absolute; top: 0; right: 10px; margin-top: -9px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; }
-.col_right .sns_area .tooltip_inner > p { line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
-.col_right .sns_area .tooltip_inner .btn_tooltip_close { position: absolute; top: 9px; right: 9px; width: 14px; height: 14px; background-image: url(../images/ic-x.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .col_right .info_wrap { margin-top: 47px; }
 .col_right .table_responsive { width: 100%; }
 
