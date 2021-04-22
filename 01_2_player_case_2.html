@@ -234,52 +234,6 @@
 </div>
 <script src="res/js/common.js"></script>
 
-<!-- 더미스크립트 -->
-<script>
-var timeDrag = false;
-var endDrag = null;
-var mouseDrag = false;
-var hasTouchEvent = "ontouchstart" in document.documentElement,
-    START_EV = hasTouchEvent ? "touchstart" : "mousedown",
-    MOVE_EV = hasTouchEvent ? "touchmove" : "mousemove",
-    END_EV = hasTouchEvent ? "touchend" : "mouseup";
-
-var progress_1 = document.querySelector('.playerbar_wrap');
-
-progress_1.addEventListener(START_EV, function (e) {
-    timeDrag = true;
-    mouseDrag = true;
-	endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
-});
-progress_1.addEventListener(MOVE_EV, function (e) {
-	e.preventDefault();
-    if (mouseDrag == false){
-        return;
-    }
-    endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
-	updatebar(endDrag);
-});
-progress_1.addEventListener(END_EV, function (e) {
-    mouseDrag = false;
-    if(timeDrag) {
-		updatebar(endDrag);
-    }
-});
-
-var updatebar = function(x) {
-	var progress = progress_1.querySelector('.progressBar');
-	var position = x - progress.getBoundingClientRect().left;
-	var percentage = 100 * position / progress.getBoundingClientRect().width;
-	if(percentage > 100) {
-		percentage = 100;
-	}
-	if(percentage < 0) {
-		percentage = 0;
-	}
-    progress_1.querySelector('.timeBar').style.width = percentage+'%';
-};
-</script>
-<!-- 더미스크립트 -->
 
 </body>
 </html>

@@ -34,6 +34,22 @@
                             <source src="mov_bbb.mp4" type="video/mp4">
                         </video>
                         <div class="ctrl_wrap">
+                            <div class="top_area">
+                                <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
+                                <button class="btn_set" type="button" onclick="this.classList.toggle('on');"><i class="ic_set">설정</i></button>
+                                <ul class="set_wrap">
+                                    <li>
+                                        <a href="#" class="dropdown" onclick="this.classList.toggle('unfold');"><span class="txt">화질 선택</span><span class="txt_current">초고화질</span></a>
+                                        <div class="list_dropdown">
+                                            <ul>
+                                                <li><a href="#" class="current">초고화질</a></li>
+                                                <li><a href="#">고화질</a></li>
+                                                <li><a href="#">일반화질</a></li>
+                                            </ul>
+                                        </div>                                        
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="center_area">
                                 <button class="btn_play" type="button" onclick="this.classList.toggle('on');">play/pause</button>
                             </div>
@@ -48,11 +64,11 @@
                                         </div>
                                     </button>
                                 </div>
-                                <div class="playerbar_wrap">
+                                <!-- <div class="playerbar_wrap">
                                     <div class="progressBar">
                                         <div class="timeBar" style="width:18%;"><div class="timeBar_handle"></div></div>
                                     </div>			
-                                </div>
+                                </div> -->
                                 <button class="btn_magnify" type="button" onclick="document.getElementById('wrap').classList.toggle('fullplayer');">magnify</button>
                             </div>
                         </div>
@@ -247,52 +263,6 @@
 </div>
 <script src="res/js/common.js"></script>
 
-<!-- 더미스크립트 -->
-<script>
-var timeDrag = false;
-var endDrag = null;
-var mouseDrag = false;
-var hasTouchEvent = "ontouchstart" in document.documentElement,
-    START_EV = hasTouchEvent ? "touchstart" : "mousedown",
-    MOVE_EV = hasTouchEvent ? "touchmove" : "mousemove",
-    END_EV = hasTouchEvent ? "touchend" : "mouseup";
-
-var progress_1 = document.querySelector('.playerbar_wrap');
-
-progress_1.addEventListener(START_EV, function (e) {
-    timeDrag = true;
-    mouseDrag = true;
-	endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
-});
-progress_1.addEventListener(MOVE_EV, function (e) {
-	e.preventDefault();
-    if (mouseDrag == false){
-        return;
-    }
-    endDrag = hasTouchEvent ? e.touches[0].clientX : e.clientX;
-	updatebar(endDrag);
-});
-progress_1.addEventListener(END_EV, function (e) {
-    mouseDrag = false;
-    if(timeDrag) {
-		updatebar(endDrag);
-    }
-});
-
-var updatebar = function(x) {
-	var progress = progress_1.querySelector('.progressBar');
-	var position = x - progress.getBoundingClientRect().left;
-	var percentage = 100 * position / progress.getBoundingClientRect().width;
-	if(percentage > 100) {
-		percentage = 100;
-	}
-	if(percentage < 0) {
-		percentage = 0;
-	}
-    progress_1.querySelector('.timeBar').style.width = percentage+'%';
-};
-</script>
-<!-- 더미스크립트 -->
 
 </body>
 </html>
