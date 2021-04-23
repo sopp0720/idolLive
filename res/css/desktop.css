@@ -33,14 +33,14 @@
 .btn_basic.disabled:before { display: none !important; }
 .btn_basic.disabled:hover { background-color: #bfbfbf !important; }
 .btn_basic.disabled .btn_txt { color: rgba(0,0,0,0.2) !important; }
-.btn_link { position: relative; display: block; width: 100%; font-size: 0; height: 84px; border-radius: 0; background-color: #f5f5f5; padding: 17px 66px 19px 60px; border: 2px solid #e5e5e5; text-align: left; outline: none; }
-.btn_link .btn_txt { display: block; line-height: 22px; font-size: 15px; font-weight: bold; letter-spacing: -0.43px; color: #000000; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; }
+.btn_link { position: relative; display: block; width: 100%; font-size: 0; height: 58px; border-radius: 0; background-color: #f5f5f5; padding: 15px 68px 17px 56px; border: 2px solid #e5e5e5; text-align: left; outline: none; }
+.btn_link .btn_txt { display: block; line-height: 22px; font-size: 15px; font-weight: bold; letter-spacing: -0.43px; color: #000000; }
 .btn_link:hover .btn_txt { color: #7e65ff; }
 
 /* button icon */
-.btn_link .img_coupon { position: absolute; top: 27px; left: 19px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/img-coupon.png); background-size: 100% auto; }
+.btn_link .img_coupon { position: absolute; top: 13px; left: 18px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/img-coupon.png); background-size: 100% auto; }
 .btn_link.disabled .img_coupon { opacity: 0.3; }
-.btn_link .ic-arrow { position: absolute; top: 27px; right: 14px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/ic-arrow.png); background-size: 100%; }
+.btn_link .ic-arrow { position: absolute; top: 13px; right: 13px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/ic-arrow.png); background-size: 100%; }
 .btn_link:hover .ic-arrow { background-position: 0 50%; }
 .btn_link.disabled .ic-arrow { background-position: 0 100%; }
 .btn_link.disabled .btn_txt { color: rgba(0,0,0,0.3); }
@@ -186,8 +186,8 @@
 .title_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .title_wrap .middle_inner { position: relative; width: 547px; text-align: left; display: inline-block; vertical-align: middle; white-space: normal; }
 .title_wrap .title { margin-top: 30px; line-height: 61px; font-size: 42px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; }
-.title_wrap .time { margin-top: 17px; line-height: 30px; font-size: 21px; font-weight: 500; letter-spacing: -0.5px; color: rgba(238,238,238,0.6); }
-.title_wrap .time .tg_live { vertical-align: top; display: inline-block; margin: 5px 20px 0 0; width: 45px; height: 22px; padding: 2px 0; line-height: 18px; font-family: Montserrat; font-size: 14px; font-weight: 800; text-align: center; color: #000000; background-color: #ef4847; }
+.title_wrap .time { margin-top: 17px; line-height: 30px; font-family: 'Montserrat'; font-size: 21px; font-weight: 500; letter-spacing: -0.5px; color: rgba(238,238,238,0.8); }
+.title_wrap .time .tg_live { vertical-align: top; display: inline-block; margin: 5px 20px 0 0; width: 45px; height: 22px; background-image: url(../images/img-tag-live.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 
 .title_wrap .sns_area { position: absolute; bottom: 45px; right: 0; }
 .title_wrap .sns_area .btn_share { float: left; position: relative; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/btn_share_lg.png); background-size: 100%; }
