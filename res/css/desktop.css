@@ -249,7 +249,7 @@
 .player_wrap .btn_play.on { background-position: 0 66.666667%; }
 .player_wrap .btn_play.on:hover { background-position: 0 100%; }
 .player_wrap .btn_speaker .ic_speaker { display: block; width: 24px; height: 24px; background-image: url(../images/ic_speaker_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
-.player_wrap .btn_speaker:hover .ic_speaker { background-position: 0 100%; }
+.player_wrap .btn_speaker.active .ic_speaker { background-position: 0 100%; }
 .player_wrap .btn_magnify { width:24px; height: 24px; background-image: url(../images/ic_magnify_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .player_wrap .btn_magnify:hover { background-position: 0 100%; }
 .player_wrap .ic_heart { display: block; width: 40px; height: 40px; background-image: url(../images/icon-heart.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
@@ -271,7 +271,7 @@
 .player_wrap .link_gohome .txt:after { content: ''; position: absolute; top: 5px; right: 0; width: 10px; height: 15px; background-image: url(../images/ic-arrow-green-nor.png); background-size: 100%; }
 .player_wrap .link_gohome:hover .txt:after { background-position: 0 50%; }
 .player_wrap .ctrl_wrap { visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); text-align: center; white-space: nowrap; -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
-.player_wrap:hover .ctrl_wrap { display: block; visibility: visible; opacity: 1; }
+.player_wrap .ctrl_wrap.active { display: block; visibility: visible; opacity: 1; }
 .player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); opacity: 0.6; }
 .player_wrap .ctrl_wrap:after {content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .player_wrap .top_area { display: none; position: absolute; top: 0; left: 0; right: 0; height: 90px; padding: 23px 160px 30px 30px; text-align: left; }
@@ -311,7 +311,7 @@
 .player_wrap .volume_wrap { position: absolute; bottom: 18px; left: 24px; width: 24px; }
 .player_wrap .btn_speaker { padding-top: 6px; }
 .player_wrap .volumebar_wrap { bottom: 30px; left: 0; position: absolute; width: 24px; padding: 0 10px; height: 60px; display: none; }
-.player_wrap .btn_speaker:hover .volumebar_wrap { display: block; }
+.player_wrap .btn_speaker.active .volumebar_wrap { display: block; }
 .volumebar_wrap .progressBar { position: relative; width: 4px; height: 100%; background-color: #8f98a7; }
 .volumebar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); bottom:0; left: 0; width: 100%; height: 0; background-color: #917bff; }
 .volumebar_wrap .timeBar_handle { position: absolute; right: -3px; top: -3px; width: 10px; height: 10px; background-color: #917bff; border-radius: 100%; cursor: pointer; }
