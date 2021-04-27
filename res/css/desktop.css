@@ -255,8 +255,8 @@
 .player_wrap .ic_heart { display: block; width: 40px; height: 40px; background-image: url(../images/icon-heart.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 
 /* Mini Player */
-.live_wrap { margin-top: 30px; display: inline-block; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; }
-.col_player { width: 780px; padding-right: 20px; border-bottom: 1px solid #dddddd; }
+.live_wrap { margin-top: 30px; display: inline-block; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; border-bottom: 1px solid #dddddd; }
+.col_player { width: 780px; padding-right: 20px; }
 .player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; background-color: #000000; }
 .player_wrap video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
 .player_wrap .non_video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #644bdf; text-align: center; }
@@ -345,7 +345,7 @@
 
 /* chat */
 .col_chat { width: 244px; }
-.chat_wrap { position: relative; width: 100%; height: 539px; border: 1px solid #dddddd; }
+.chat_wrap { position: relative; width: 100%; height: 539px; border-top: 1px solid #dddddd; border-left: 1px solid #dddddd; border-right: 1px solid #dddddd; }
 .chat_wrap .chat_hd { padding: 10px 12px 11px; border-bottom: 1px solid #dddddd;  }
 .chat_wrap .txt_number { line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.43px; color: #000000; }
 .chat_wrap .txt_number > em { font-style: normal; color: #7e65ff; font-weight: 500; letter-spacing: -0.46px; }
