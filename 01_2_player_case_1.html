@@ -29,7 +29,7 @@
 		<div class="content">
             <div class="live_wrap">
                 <div class="col_player">
-                    <div class="player_wrap">
+                    <div class="player_wrap" onclick="this.classList.toggle('active');">
                         <video id="video1" width="100%" height="100%">
                             <source src="mov_bbb.mp4" type="video/mp4">
                         </video>
@@ -72,8 +72,9 @@
                                 <button class="btn_magnify" type="button" onclick="document.getElementById('wrap').classList.toggle('fullplayer');">magnify</button>
                             </div>
                         </div>
+                        <div class="ani_heart_btn" id="btn_heart"></div>
                         <div class="heart_wrap">
-                            <button class="btn_heart" type="button" onclick="#"><i class="ic_heart">하트날리기</i></button>
+                            <button class="btn_heart" type="button"><!-- <i class="ic_heart">하트날리기</i> --></button>
                             <div class="txt_hit">2,380,001</div>
                         </div>
                     </div>
@@ -262,7 +263,97 @@
     </div>
 </div>
 <script src="res/js/common.js"></script>
+<script src="res/js/libs/lottie.min.js"></script>
+<script>
+var heartBtn = (function() {
+    let animation1;
+    let animation2;
+    let animation3;
+    let btn = document.querySelector('.btn_heart');
+    let elem = document.querySelector('.ani_heart_btn');
+    let longpress = false;
+    let startTime
+    let endTime;
+    var hasTouchEvent = "ontouchstart" in document.documentElement,
+        START_EV = hasTouchEvent ? "touchstart" : "mousedown",
+        END_EV = hasTouchEvent ? "touchend" : "mouseup";
+    return {
+        "init": function() {
+            let hit = 'btn_heart_default';
+            let heartPath = 'res/json/btn_heart/' + hit + '.json';
+            animation1 = lottie.loadAnimation({
+                container: elem,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            btn.addEventListener(START_EV, function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                startTime = new Date().getTime();
+            });
+            btn.addEventListener(END_EV, () => { 
+                endTime = new Date().getTime();
+                longpress = (endTime - startTime < 500) ? false : true;
+                if (longpress){
+                    heartBtn.longtap();
+                } else {
+                    heartBtn.shortap();
+                }
+            });
+            // animation2.addEventListener('complete', function() {
+            //     heartBtn.initDefault();
+            // });
+            // animation3.addEventListener('complete', function() {
+            //     heartBtn.initDefault();
+            // });
+        },
+        "initDefault": function() {
+            elem.querySelector('svg').remove();
+            let hit = 'btn_heart_default';
+            let heartPath = 'res/json/btn_heart/' + hit + '.json';
+            animation1 = lottie.loadAnimation({
+                container: elem,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+        },        
+        "longtap": function() {
+            elem.querySelector('svg').remove();
+            let hit = 'btn_heart_longtap';
+            let heartPath = 'res/json/btn_heart/' + hit + '.json';
+            animation2 = lottie.loadAnimation({
+                container: elem,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            animation2.onComplete = function() {
+                heartBtn.initDefault();
+            }            
+        },
+        "shortap": function() {
+            elem.querySelector('svg').remove();
+            let hit = 'btn_heart_shortap';
+            let heartPath = 'res/json/btn_heart/' + hit + '.json';
+            animation3 = lottie.loadAnimation({
+                container: elem,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+        },
+    }
+})();
+heartBtn.init();
 
+
+</script>
 
 </body>
 </html>
