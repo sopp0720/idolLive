@@ -37,6 +37,16 @@
 .btn_link .btn_txt { display: block; line-height: 22px; font-size: 15px; font-weight: bold; letter-spacing: -0.43px; color: #000000; }
 .btn_link:hover .btn_txt { color: #7e65ff; }
 
+.btn_non_border  { position: relative; margin: 0 8px; vertical-align: top; display: inline-block; width: 221px; font-size: 0; height: 56px; border: 0 none; border-radius: 0; background-color: #917bff; padding: 13px 20px 17px; text-align: center; outline: none; }
+.btn_non_border:hover { background-color: #6b51ed; }
+.btn_non_border .btn_txt { vertical-align: top; display: inline-block; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.btn_non_border.disabled { background-color: #bfbfbf !important; }
+.btn_non_border.disabled .btn_txt { color: rgba(0,0,0,0.3); }
+.btn_non_border.gray { background-color: #cccccc; }
+.btn_non_border.gray:hover { background-color: #aeaeae; }
+.btn_non_border.gray.disabled { background-color: #cccccc !important; }
+.btn_non_border.gray.disabled .btn_txt { color: rgba(0,0,0,0.3); }
+
 /* button icon */
 .btn_link .img_coupon { position: absolute; top: 13px; left: 18px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/img-coupon.png); background-size: 100% auto; }
 .btn_link.disabled .img_coupon { opacity: 0.3; }
@@ -392,6 +402,11 @@
 .list_artist .txt_artist { margin-top: 8px; line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .list_artist .txt_song { margin-top: 5px; height: 32px; line-height: 16px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: rgba(0,0,0,0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; word-break: keep-all; word-wrap: break-word; }
 
+.error_wrap { margin-top: 217px; font-size: 0; text-align: center; }
+.error_wrap .img-error { display: block; margin: 0 auto; width: 166px; height: 166px; }
+.error_wrap .txt_error_1 { margin-top: 16px; line-height: 45px; font-size: 31px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.error_wrap .txt_error_2 { margin-top: 19px; line-height: 32px; font-size: 20px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.error_wrap .error_from { margin: 80px auto 0; text-align: center; font-size: 0; }
 
 
 
