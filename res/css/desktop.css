@@ -360,10 +360,16 @@
 .fullplayer .player_wrap .volume_wrap { bottom: 32px; left: 32px; width: 30px; }
 .fullplayer .player_wrap .volumebar_wrap { width: 30px; padding: 0 13px; bottom: 36px; }
 .fullplayer .player_wrap .btn_magnify { width: 30px; height: 30px; background-image: url(../images/ic_magnify_full.png); }
-.fullplayer .heart_wrap { bottom: 82px; right: 30px; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
-.fullplayer .player_wrap:hover .heart_wrap { visibility: visible; opacity: 1; }
+.fullplayer .heart_wrap { visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
+.player_wrap .ctrl_wrap.active ~ .heart_wrap { visibility: visible; opacity: 1; }
 .fullplayer .heart_wrap .btn_heart { position: absolute; bottom: 108px; right: 35px; }
+
 .fullplayer .player_wrap .ani_heart_btn { bottom: 108px; right: 35px; }
+.fullplayer .player_wrap .ani_shortap { top: 156px; }
+.fullplayer .player_wrap .ani_longtap { top: 156px; }
+.fullplayer .player_wrap .ani_counting_full {  }
+.fullplayer .player_wrap .ani_counting {  }
+
 .fullplayer .player_wrap .ic_heart { width: 54px; height: 54px; }
 .fullplayer .heart_wrap .txt_hit { line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
 
