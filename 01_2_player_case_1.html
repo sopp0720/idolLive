@@ -33,7 +33,7 @@
                         <video id="video1" width="100%" height="100%">
                             <source src="mov_bbb.mp4" type="video/mp4">
                         </video>
-                        <div class="ctrl_wrap active">
+                        <div class="ctrl_wrap">
                             <div class="top_area">
                                 <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
                                 <button class="btn_set" type="button" onclick="this.classList.toggle('on');"><i class="ic_set">설정</i></button>
@@ -73,10 +73,11 @@
                             </div>
                         </div>
                         <div class="heart_wrap">
-                            <div class="ani_heart_btn" id="btn_heart"></div>
-                            <div class="ani_shortap"></div>
-                            <div class="ani_longtap"></div>
-                            <div class="ani_counting_full"></div>
+                            <div class="ani_heart_btn" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_shortap" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_longtap" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_counting_full" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_counting" style="border: 2px dotted #000;"></div>
                             <button class="btn_heart" type="button"></button>
                             <div class="txt_hit">2,380,001</div>
                         </div>
@@ -276,9 +277,9 @@ var heartBtn = (function() {
     let elem2 = document.querySelector('.ani_shortap');
     let elem3 = document.querySelector('.ani_longtap');
     let elem4 = document.querySelector('.ani_counting_full');
+    let elem5 = document.querySelector('.ani_counting');
     let cnt = 0;
-//    let elem5 = document.querySelector('.ani_counting');
-    
+   
     let longpress = false;
     let startTime
     let endTime;
@@ -369,34 +370,62 @@ var heartBtn = (function() {
         "counting": function() {
             var nameCounting = ["counting_10k", "counting_100k", "counting_1m", "counting_10m", "counting_100m", "counting_1b"];
             switch (cnt) {
+                // 10000 미만
                 case 10:
-                    heartBtn.anicounting(nameCounting[0]);
+                    heartBtn.anicounting('th_100');
                     break;
                 case 20:
-                    heartBtn.anicounting(nameCounting[1]);
+                    heartBtn.anicounting('th_200');
                     break;
                 case 30:
-                    heartBtn.anicounting(nameCounting[2]);
+                    heartBtn.anicounting('th_9900');
                     break;
+                // 10000 이상 
                 case 40:
-                    heartBtn.anicounting(nameCounting[3]);
+                    heartBtn.anicountingfull(nameCounting[0]);
                     break;
                 case 50:
-                    heartBtn.anicounting(nameCounting[4]);
+                    heartBtn.anicountingfull(nameCounting[1]);
                     break;
                 case 60:
-                    heartBtn.anicounting(nameCounting[5]);
+                    heartBtn.anicountingfull(nameCounting[2]);
+                    break;
+                case 70:
+                    heartBtn.anicountingfull(nameCounting[3]);
+                    break;
+                case 80:
+                    heartBtn.anicountingfull(nameCounting[4]);
+                    break;
+                case 90:
+                    heartBtn.anicountingfull(nameCounting[5]);
                     break;
                 default:
                     return;
             }
         },
-        "anicounting": function(val) {
+        "anicountingfull": function(val) {
             let nameCounting = val;
             let aniChild = document.createElement('div');
             elem4.appendChild(aniChild);
 
             let heartPath = 'res/json/counting/counting/' + nameCounting + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "anicounting": function(val) {
+            let nameCounting = val;
+            let aniChild = document.createElement('div');
+            elem5.appendChild(aniChild);
+
+            let heartPath = 'res/json/100th/' + nameCounting + '.json';
             let ani = lottie.loadAnimation({
                 container: aniChild,
                 renderer: 'svg',
