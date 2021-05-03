@@ -74,6 +74,8 @@
                         </div>
                         <div class="heart_wrap">
                             <div class="ani_heart_btn" id="btn_heart"></div>
+                            <div class="ani_shortap"></div>
+                            <div class="ani_longtap"></div>
                             <button class="btn_heart" type="button"></button>
                             <div class="txt_hit">2,380,001</div>
                         </div>
@@ -263,14 +265,15 @@
     </div>
 </div>
 <script src="res/js/common.js"></script>
-<script src="res/js/libs/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous"></script>
+<!-- <script src="res/js/libs/lottie.min.js"></script> -->
 <script>
 var heartBtn = (function() {
     let animation1;
-    let animation2;
-    let animation3;
     let btn = document.querySelector('.btn_heart');
     let elem = document.querySelector('.ani_heart_btn');
+    let elem2 = document.querySelector('.ani_shortap');
+    let elem3 = document.querySelector('.ani_longtap');
     let longpress = false;
     let startTime
     let endTime;
@@ -279,13 +282,14 @@ var heartBtn = (function() {
         END_EV = hasTouchEvent ? "touchend" : "mouseup";
     return {
         "init": function() {
-            let hit = 'btn_heart_default';
+            let hit = 'btn_heart';
             let heartPath = 'res/json/btn_heart/' + hit + '.json';
             animation1 = lottie.loadAnimation({
                 container: elem,
                 renderer: 'svg',
                 loop: false,
-                autoplay: true,
+                autoplay: false,
+                prerender: true,
                 path: heartPath
             });
             btn.addEventListener(START_EV, function(e) {
@@ -295,19 +299,13 @@ var heartBtn = (function() {
             });
             btn.addEventListener(END_EV, () => { 
                 endTime = new Date().getTime();
-                longpress = (endTime - startTime < 500) ? false : true;
+                longpress = (endTime - startTime < 200) ? false : true;
                 if (longpress){
                     heartBtn.longtap();
                 } else {
                     heartBtn.shortap();
                 }
             });
-            // animation2.addEventListener('complete', function() {
-            //     heartBtn.initDefault();
-            // });
-            // animation3.addEventListener('complete', function() {
-            //     heartBtn.initDefault();
-            // });
         },
         "initDefault": function() {
             elem.querySelector('svg').remove();
@@ -322,37 +320,58 @@ var heartBtn = (function() {
             });
         },        
         "longtap": function() {
-            elem.querySelector('svg').remove();
-            let hit = 'btn_heart_longtap';
-            let heartPath = 'res/json/btn_heart/' + hit + '.json';
-            animation2 = lottie.loadAnimation({
-                container: elem,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                path: heartPath
-            });
-            animation2.onComplete = function() {
-                heartBtn.initDefault();
-            }            
+            animation1.playSegments([160,200],true);
+            animation1.onComplete = function() {
+                animation1.playSegments([2,120],true);
+            }
+            heartBtn.anilongtap();
         },
         "shortap": function() {
-            elem.querySelector('svg').remove();
-            let hit = 'btn_heart_shortap';
-            let heartPath = 'res/json/btn_heart/' + hit + '.json';
-            animation3 = lottie.loadAnimation({
-                container: elem,
+            animation1.playSegments([125,170],true);
+            animation1.onComplete = function() {
+                animation1.playSegments([2,120],true);
+            }
+            heartBtn.anishortap();
+        },
+        "anishortap": function() {
+            var arrayShortap = ["green-1", "green-2", "green-3", "group-3", "group-5", "group-9", "purple-1", "purple-2", "purple-3", "red-1", "red-2", "red-3", "yellow-1", "yellow-2", "yellow-3"];
+            arrayShortap = arrayShortap[Math.floor(Math.random() * arrayShortap.length)];
+            let aniChild = document.createElement('div');
+            elem2.appendChild(aniChild);
+
+            let heartPath = 'res/json/short_tap/' + arrayShortap + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
                 renderer: 'svg',
                 loop: false,
                 autoplay: true,
                 path: heartPath
             });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "anilongtap": function() {
+            var arraylongtap = ["longtap"];
+            arraylongtap = arraylongtap[Math.floor(Math.random() * arraylongtap.length)];
+            let aniChild = document.createElement('div');
+            elem3.appendChild(aniChild);
+
+            let heartPath = 'res/json/long_tap/' + arraylongtap + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
         },
     }
 })();
 heartBtn.init();
-
-
 </script>
 
 </body>

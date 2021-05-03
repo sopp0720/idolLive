@@ -266,7 +266,7 @@
 
 /* Mini Player */
 .live_wrap { margin-top: 30px; display: inline-block; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; border-bottom: 1px solid #dddddd; }
-.col_player { width: 780px; padding-right: 20px; }
+.col_player { position: relative; width: 780px; padding-right: 20px; z-index: 1; }
 .player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; background-color: #000000; }
 .player_wrap video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; }
 .player_wrap .non_video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #644bdf; text-align: center; }
@@ -326,7 +326,12 @@
 .volumebar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); bottom:0; left: 0; width: 100%; height: 0; background-color: #917bff; }
 .volumebar_wrap .timeBar_handle { position: absolute; right: -3px; top: -3px; width: 10px; height: 10px; background-color: #917bff; border-radius: 100%; cursor: pointer; }
 .player_wrap .btn_magnify { position: absolute; bottom: 20px; right: 20px; }
-.player_wrap .ani_heart_btn { position: absolute; bottom: -60px; right: 20px; width: 50px; height: 113px; pointer-events: none; touch-action: none; }
+.player_wrap .ani_heart_btn { position: absolute; bottom: -60px; right: 20px; width: 50px; height: 113px; pointer-events: none; touch-action: none; border: 1px solid #ff0000; }
+.player_wrap .ani_heart_btn > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.player_wrap .ani_shortap { position: absolute; bottom: 60px; right: -51px; width: 200px; height: 333px; pointer-events: none; touch-action: none; border: 1px solid #ff0000; }
+.player_wrap .ani_shortap > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.player_wrap .ani_longtap { position: absolute; bottom: 60px; right: -51px; width: 200px; height: 333px; pointer-events: none; touch-action: none; border: 1px solid #ff0000; }
+.player_wrap .ani_longtap > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .heart_wrap .btn_heart { position: absolute; bottom: -60px; right: 20px; width: 50px; height: 50px; }
 
 /*bottom: -83px; right: 8px; */
