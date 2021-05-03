@@ -76,6 +76,7 @@
                             <div class="ani_heart_btn" id="btn_heart"></div>
                             <div class="ani_shortap"></div>
                             <div class="ani_longtap"></div>
+                            <div class="ani_counting_full"></div>
                             <button class="btn_heart" type="button"></button>
                             <div class="txt_hit">2,380,001</div>
                         </div>
@@ -274,6 +275,10 @@ var heartBtn = (function() {
     let elem = document.querySelector('.ani_heart_btn');
     let elem2 = document.querySelector('.ani_shortap');
     let elem3 = document.querySelector('.ani_longtap');
+    let elem4 = document.querySelector('.ani_counting_full');
+    let cnt = 0;
+//    let elem5 = document.querySelector('.ani_counting');
+    
     let longpress = false;
     let startTime
     let endTime;
@@ -306,18 +311,6 @@ var heartBtn = (function() {
                     heartBtn.shortap();
                 }
             });
-        },
-        "initDefault": function() {
-            elem.querySelector('svg').remove();
-            let hit = 'btn_heart_default';
-            let heartPath = 'res/json/btn_heart/' + hit + '.json';
-            animation1 = lottie.loadAnimation({
-                container: elem,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                path: heartPath
-            });
         },        
         "longtap": function() {
             animation1.playSegments([160,200],true);
@@ -325,13 +318,17 @@ var heartBtn = (function() {
                 animation1.playSegments([2,120],true);
             }
             heartBtn.anilongtap();
+            cnt++;
+            heartBtn.counting();
         },
         "shortap": function() {
-            animation1.playSegments([125,170],true);
+            animation1.playSegments([125,145],true);
             animation1.onComplete = function() {
                 animation1.playSegments([2,120],true);
             }
             heartBtn.anishortap();
+            cnt++;
+            heartBtn.counting();
         },
         "anishortap": function() {
             var arrayShortap = ["green-1", "green-2", "green-3", "group-3", "group-5", "group-9", "purple-1", "purple-2", "purple-3", "red-1", "red-2", "red-3", "yellow-1", "yellow-2", "yellow-3"];
@@ -358,6 +355,48 @@ var heartBtn = (function() {
             elem3.appendChild(aniChild);
 
             let heartPath = 'res/json/long_tap/' + arraylongtap + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "counting": function() {
+            var nameCounting = ["counting_10k", "counting_100k", "counting_1m", "counting_10m", "counting_100m", "counting_1b"];
+            switch (cnt) {
+                case 10:
+                    heartBtn.anicounting(nameCounting[0]);
+                    break;
+                case 20:
+                    heartBtn.anicounting(nameCounting[1]);
+                    break;
+                case 30:
+                    heartBtn.anicounting(nameCounting[2]);
+                    break;
+                case 40:
+                    heartBtn.anicounting(nameCounting[3]);
+                    break;
+                case 50:
+                    heartBtn.anicounting(nameCounting[4]);
+                    break;
+                case 60:
+                    heartBtn.anicounting(nameCounting[5]);
+                    break;
+                default:
+                    return;
+            }
+        },
+        "anicounting": function(val) {
+            let nameCounting = val;
+            let aniChild = document.createElement('div');
+            elem4.appendChild(aniChild);
+
+            let heartPath = 'res/json/counting/counting/' + nameCounting + '.json';
             let ani = lottie.loadAnimation({
                 container: aniChild,
                 renderer: 'svg',
