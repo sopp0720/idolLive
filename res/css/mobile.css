@@ -349,7 +349,7 @@
 .col_player .detail .time { line-height: 20px; margin-top: 9px; font-family: 'Montserrat'; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; color: #000000; }
 
 /* Full Player */
-.fullplayer .player_wrap { position: fixed; top: 0; left: 0; width: 100%; z-index: 10; }
+/*.fullplayer .player_wrap { position: fixed; top: 0; left: 0; width: 100%; z-index: 10; }
 .fullplayer .player_wrap .top_area { display: block; }
 .fullplayer #header,
 .fullplayer #footer,
@@ -361,7 +361,40 @@
 .fullplayer .player_wrap:hover .heart_wrap { visibility: visible; opacity: 1; }
 .fullplayer .heart_wrap .btn_heart { position: absolute; bottom: 22px; left: 0; right: 0; margin: 0 auto; }
 .fullplayer .player_wrap .ic_heart { width: 54px; height: 54px; }
+.fullplayer .heart_wrap .txt_hit { line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }*/
+
+
+/* Full Player */
+.fullplayer .player_wrap { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 10; }
+.fullplayer .player_wrap .top_area { display: block; }
+.fullplayer #header,
+.fullplayer #footer,
+.fullplayer .col_chat,
+.fullplayer .col_player .detail,
+.fullplayer .artist_wrap { display: none; }
+.fullplayer .player_wrap { padding-top: 0; }
+.fullplayer .player_wrap .btn_play { width: 140px; height: 140px; background-image: url(../images/ic_play_pause_full.png); }
+.fullplayer .player_wrap .btn_speaker .ic_speaker { width: 30px; height: 30px; background-image: url(../images/ic_speaker_full.png); }
+.fullplayer .player_wrap .volume_wrap { bottom: 32px; left: 32px; width: 30px; }
+.fullplayer .player_wrap .volumebar_wrap { width: 30px; padding: 0 13px; bottom: 36px; }
+.fullplayer .player_wrap .btn_magnify { width: 30px; height: 30px; background-image: url(../images/ic_magnify_full.png); }
+.fullplayer .heart_wrap { visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
+.player_wrap .ctrl_wrap.active ~ .heart_wrap { visibility: visible; opacity: 1; }
+.fullplayer .heart_wrap .btn_heart { position: absolute; bottom: 12%; right: 1.375%; width: 4.8675%; height: 18.8888%; }
+
+.fullplayer .player_wrap .ani_heart_btn { bottom: 12%; right: 1.375%; width: 4.8675%; height: 18.8888%; }
+.fullplayer .player_wrap .ani_shortap { right: -4%; bottom: 17%; width: 17.725%; height: 55.5555%; }
+.fullplayer .player_wrap .ani_longtap { right: -4%; bottom: 17%; width: 17.725%; height: 55.5555%; }
+.fullplayer .player_wrap .ani_counting_full { top: 0; left: 0; right: 0; bottom: 6.6%; width: 52%; height: 66.6666%; margin: auto;  }
+.fullplayer .player_wrap .ani_counting { right: -4%; bottom: 17%; width: 17.725%; height: 55.5555%; }
+
+.fullplayer .player_wrap .ic_heart { width: 54px; height: 54px; }
 .fullplayer .heart_wrap .txt_hit { line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
+
+
+
+
+
 
 /* chat */
 .col_chat { width: 100%; }
