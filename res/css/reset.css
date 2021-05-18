@@ -79,6 +79,10 @@ html {font-size:5px;}
 @media screen and (min-width: 432px){
 	html {font-size:12px;}
 }
+@media screen and (min-width: 460px){
+	html {font-size:12.7777px;}
+}
+/*
 @media screen and (min-width: 468px){
 	html {font-size:13px;}
 }
@@ -180,5 +184,5 @@ html {font-size:5px;}
 }
 @media screen and (min-width: 1620px){
 	html {font-size:45px;}
-}
+}*/
 
