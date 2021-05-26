@@ -123,6 +123,7 @@
 .modal .modal_ft { display: -webkit-box; display: -webkit-flex; display: flex; height: 4.3826rem; }
 .modal .modal_ft .btn { position: relative; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; padding: 1.0174rem 0 1.3304rem; line-height: 2.0348rem; font-size: 1.4087rem; font-weight: bold; letter-spacing: -0.0391rem; text-align: center; color: #000000; background-color: #917bff; }
 .modal .modal_ft .btn.gray { background-color: #cccccc; }
+.modal .modal_ft .btn.disabled { background-color: #bfbfbf; color: rgba(0,0,0,0.3); }
 .modal .modal_close { position: absolute; top: 2.1131rem; right: 1.8783rem; width: 1.1739rem; height: 1.1739rem; background-image: url(../images/ic-popup-exit.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -999em; }
 .modal .login ~ .modal_close { background-image: url(../images/ic-popup-exit-white.png); }
 
@@ -138,9 +139,10 @@
 .modal .pur_bd .txt_type_2 { position: relative; border-top: 1px solid #ececec; padding: 1.3304rem 7.8261rem 1.3304rem 0; line-height: 1.4087rem; font-size: 1.1739rem; font-weight: normal; color: #616161; }
 .modal .pur_bd .txt_type_2 .price { position: absolute; top: 1.3304rem; right: 0; line-height: 1.4087rem; font-size: 1.0957rem; font-weight: 600; color: #616161; font-family: 'Montserrat'; }
 .modal .pur_bd .txt_type_2 .price > em { font-style: normal; font-size: 0.9391rem; font-weight: normal; font-family: 'Noto Sans KR'; }
-.modal .pur_bd .desc_type { border-top: 1px solid #ececec; padding: 0.8609rem 0 1.9565rem; }
+.modal .pur_bd .desc_type { border-top: 1px solid #ececec; padding: 0.8609rem 0 1.5652rem; }
 .modal .list_desc_s li { position: relative; padding-left: 0.7826rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: rgba(0, 0, 0, 0.7); }
 .modal .list_desc_s li:before { content: ''; position: absolute; top: 0.6261rem; left: 0; width: 0.2348rem; height: 0.2348rem; background-color: #000000; border-radius: 50%; }
+.modal .list_desc_s li + li { margin-top: 0.7044rem; }
 .modal .btn_detail_link { position: relative; margin-top: 0.9391rem; display: inline-block; padding-right: 0.9391rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: #7e65ff; }
 .modal .btn_detail_link:before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background-color: #7e65ff; }
 .modal .btn_detail_link:after { content: ''; position: absolute; top: 0.313rem; right: 0; width: 0.6261rem; height: 1.0957rem; background-image: url(../images/ic-arrow-link_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
