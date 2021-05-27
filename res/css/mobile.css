@@ -423,7 +423,7 @@
 .fullplayer .player_wrap.multi .main_video { right: 36%; }
 .fullplayer .player_wrap .member_video { -webkit-transition: right 0.3s ease-in-out; transition: right 0.3s ease-in-out; position: absolute; right: -36%; top: 0; width: 36%; height: 100%; }
 .fullplayer .player_wrap.multi .member_video { right: 0; }
-.fullplayer .player_wrap .member_video .btn_close { position: absolute; top: 20px; left: 22px; width: 26px; height: 26px; background-color: red; }
+.fullplayer .player_wrap .member_video .btn_close { position: absolute; top: 20px; left: 22px; width: 26px; height: 26px; background-image: url(../images/ic-member-exit.png); background-size: 100%; }
 .fullplayer .player_wrap .member_video video { object-fit: cover; }
 .fullplayer .player_wrap .top_area { display: block; }
 .fullplayer #header, .fullplayer #footer, .fullplayer .col_chat, .fullplayer .col_player .detail, .fullplayer .artist_wrap { display: none; }
@@ -463,9 +463,9 @@
 .fullplayer .member_wrap .name { position: absolute; top: 53px; line-height: 20px; font-size: 14px; font-weight: bold; text-align: center; color: #ffffff; z-index: 2; }
 .fullplayer .member_wrap .item.active .name { position: absolute; top: 53px; left: -8px; right: 8px; line-height: 20px; font-size: 14px; font-weight: bold; text-align: center; color: #000000; z-index: 2; }
 .fullplayer .member_wrap .swiper-button-next { position: absolute; top: 0; right: 0; height: 22px; width: 100%; background-color: #ffffff; }
-.fullplayer .member_wrap .swiper-button-next:after { content: ''; display: none; }
+.fullplayer .member_wrap .swiper-button-next:after { content: ''; position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px; width: 17px; height: 16px; background-image: url(../images/ic-arrow-member.png); background-size: 100%; }
 .fullplayer .member_wrap .swiper-button-prev { position: absolute; top: auto; bottom: 0; left: 0; height: 22px; width: 100%; background-color: #ffffff; }
-.fullplayer .member_wrap .swiper-button-prev:after { content: ''; display: none; }
+.fullplayer .member_wrap .swiper-button-prev:after { content: ''; position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px; width: 17px; height: 16px; background-image: url(../images/ic-arrow-member.png); background-size: 100%; transform: rotate(180deg); }
 .fullplayer .player_wrap.extend .btn_heart { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 .fullplayer .player_wrap.extend .ani_heart_btn { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 
