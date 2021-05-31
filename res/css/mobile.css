@@ -441,7 +441,7 @@
 .fullplayer .player_wrap .ani_counting_full { top: 0; left: 0; right: 0; bottom: 6.6%; width: 52%; height: 66.6666%; margin: auto; }
 .fullplayer .player_wrap .ani_counting { right: -4%; bottom: 17%; width: 17.725%; height: 55.5555%; }
 .fullplayer .player_wrap .ic_heart { width: 54px; height: 54px; }
-.fullplayer .heart_wrap .txt_hit { line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
+.fullplayer .heart_wrap .txt_hit { bottom: 8%; right: 0.1%; line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
 .fullplayer .player_wrap .btn_member { position: absolute; bottom: 0; left: auto; right: -82px; top: 0; margin: auto 0; width: 82px; height: 90px; border: solid 2px #000000; background-color: rgba(82, 255, 196, 0.95); padding: 56px 10px 10px 30px; line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; color: #000000; border-radius: 0; -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); }
 .fullplayer .player_wrap .btn_member:before { content: ''; position: absolute; top: 12px; right: 9px; width: 40px; height: 40px; background-image: url(../images/icon-member.png); background-size: 100%; }
 .fullplayer .player_wrap .btn_member:after { content: ''; position: absolute; top: 33px; left: 7px; width: 20px; height: 20px; background-image: url(../images/ic-arrow-member-fullplayer.png); background-size: 100%; }
