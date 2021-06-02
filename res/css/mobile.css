@@ -366,7 +366,7 @@
 
 /* chat */
 .col_chat { width: 100%; }
-.chat_wrap { position: relative; width: 100%; border: 1px solid #dddddd; }
+.chat_wrap { position: relative; width: 100%; border: 1px solid #dddddd; padding-bottom: 3.1305rem; }
 .chat_wrap .chat_hd { padding: 0.7826rem 0.9391rem 0.8609rem; border-bottom: 1px solid #dddddd; }
 .chat_wrap .txt_number { line-height: 1.3304rem; font-size: 0.9391rem; font-weight: normal; letter-spacing: -0.0337rem; color: #000000; }
 .chat_wrap .txt_number > em { font-style: normal; color: #7e65ff; font-weight: 500; letter-spacing: -0.036rem; }
@@ -386,11 +386,13 @@
 .chat_wrap .right .comment { margin-top: 0.313rem; line-height: 1.3304rem; font-size: 0.9391rem; font-weight: normal; letter-spacing: -0.0391rem; color: #ffffff; word-break: break-all; word-wrap: break-word; }
 .chat_wrap .btn_chat_down { position: absolute; bottom: 3.9913rem; right: 0.8609rem; width: 2.0348rem; height: 2.0348rem; box-shadow: 0 0 0.313rem 0 rgba(0, 0, 0, 0.12); background-color: #ffffff; background-image: url(../images/btn_chat_down.png); background-size: 0.7826rem 0.8609rem; background-repeat: no-repeat; background-position: 50% 50%; overflow: hidden; text-indent: -9999em; }
 .chat_wrap .btn_chat_down:hover { background-color: #dddddd; }
-.chat_wrap .chat_btm { position: relative; width: 100%; height: 3.1305rem; padding: 0.7044rem 3.1305rem 0.7044rem 0.9391rem; border-top: 1px solid #dddddd; }
-.chat_wrap .chat_input { font-size: 0; }
-.chat_wrap .textarea { position: relative; width: 100%; height: 1.3304rem; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; overflow-y: auto; overflow-x: hidden; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family: "Noto Sans KR"; line-height: 1.3304rem; font-size: 0.9391rem; font-weight: normal; letter-spacing: -0.0391rem; color: #000000; }
-.chat_wrap .textarea::-webkit-input-placeholder { line-height: 1.3304rem; font-size: 0.9391rem; color: #999999 !important; }
-.chat_wrap .btn_chat_send { position: absolute; top: 0.7826rem; right: 0.8609rem; width: 1.5652rem; height: 1.5652rem; background-image: url(../images/btn_chat_send.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.chat_wrap .chat_btm { position: absolute; bottom: 0; left: 0; width: 100%; padding: 0.7826rem 3.1305rem 0.8609rem 0.9391rem; border-top: 1px solid #dddddd; font-size: 0; background-color: #fff; }
+.chat_wrap .chat_input { display: table; width: 100%; }
+.chat_wrap .textarea_wrap { position: relative; width: 100%; vertical-align: middle; display: table-cell; font-size: 0; }
+.chat_wrap .textarea { position: relative; z-index: 1; width: 100%; max-height: 5.6348rem; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; overflow: auto; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family: "Noto Sans KR"; font-size: 0.9391rem; line-height: 1.4087rem; height: 1.4087rem; min-height: 1.4087rem; color: #000000; background-color: transparent; font-weight: normal; }
+.chat_wrap .textarea::-webkit-input-placeholder { color:#999999 !important; font-size: 0.9391rem; line-height: 1.4087rem; font-weight: normal; }
+.chat_wrap .dummy { position: absolute; left: 0; width: 100%; max-height: 5.6348rem; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; overflow: auto; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family: "Noto Sans KR"; font-size: 0.9391rem; line-height: 1.4087rem; height: 1.4087rem; min-height: 1.4087rem; color: #000000; -webkit-user-select: none; user-select: none; pointer-events: none; touch-action: none; opacity: 0; }
+.chat_wrap .btn_chat_send { position: absolute; bottom: 0.7826rem; right: 0.8609rem; width: 1.5652rem; height: 1.5652rem; background-image: url(../images/btn_chat_send.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .chat_wrap .btn_chat_send:hover { background-position: 0 50%; }
 .chat_wrap .btn_chat_send.disabled { background-position: 0 100%; }
 
