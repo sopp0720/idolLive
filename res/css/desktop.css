@@ -284,34 +284,34 @@
 .player_wrap .link_gohome:hover .txt:after { background-position: 0 50%; }
 .player_wrap .ctrl_wrap { visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); text-align: center; white-space: nowrap; -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
 .player_wrap .ctrl_wrap.active { display: block; visibility: visible; opacity: 1; }
-.player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); opacity: 0.6; }
+.player_wrap .ctrl_wrap:before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); opacity: 0.6; }
 .player_wrap .ctrl_wrap:after {content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.player_wrap .top_area { display: none; position: absolute; top: 0; left: 0; right: 0; height: 90px; padding: 23px 160px 30px 30px; text-align: left; }
-.player_wrap .top_area .title { position: relative; line-height: 37px; font-size: 26px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
-.player_wrap .top_area .tg_live { margin-top: 5px; margin-right: 14px; vertical-align: top; display: inline-block; width: 63px; height: 30px; background-image: url(../images/img-tag-live-full.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
-.player_wrap .btn_set { position: absolute; top: 30px; right: 34px; width: 30px; height: 30px; }
-.player_wrap .btn_set .ic_set { position: absolute; top: 13px; left: 13px; width: 4px; height: 4px; background-color: #ffffff; }
-.player_wrap .btn_set .ic_set:before { content: ''; position: absolute; top: -8px; left: 0; width: 4px; height: 4px; background-color: inherit; }
-.player_wrap .btn_set .ic_set:after { content: ''; position: absolute; bottom: -8px; left: 0; width: 4px; height: 4px; background-color: inherit; }
+
+.player_wrap .top_area { display: block; position: absolute; top: 0; left: 0; right: 0; height: 130px; }
+.player_wrap .top_area .title { display: none; }
+.player_wrap .btn_set { position: absolute; top: 23px; right: 17px; width: 30px; height: 30px; }
+.player_wrap .btn_set .ic_set { position: absolute; top: 13px; left: 13px; width: 3px; height: 3px; background-color: #ffffff; }
+.player_wrap .btn_set .ic_set:before { content: ''; position: absolute; top: -8px; left: 0; width: 3px; height: 3px; background-color: inherit; }
+.player_wrap .btn_set .ic_set:after { content: ''; position: absolute; bottom: -8px; left: 0; width: 3px; height: 3px; background-color: inherit; }
 .player_wrap .btn_set:hover .ic_set { background-color: #917bff; }
 .player_wrap .btn_set.on .ic_set { background-color: #917bff; }
-.player_wrap .set_wrap { display: none; position: absolute; top: 90px; right: 50px; width: 230px; border-top: 1px solid rgba(255,255,255,0.2); }
-.player_wrap .set_wrap > li { position: relative; border-bottom: 1px solid rgba(255,255,255,0.2); }
-.player_wrap .set_wrap > li .dropdown { display: block; margin: 15px 0; }
-.player_wrap .set_wrap > li .txt { line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
-.player_wrap .set_wrap > li .txt_current { position: absolute; top: -1px; right: -6px; line-height: 20px; font-size: 0; font-weight: bold; letter-spacing: -0.47px; color: #917bff; padding-right: 24px; }
-.player_wrap .set_wrap > li .unfold .txt_current { font-size: 14px; }
+.player_wrap .set_wrap { display: none; position: absolute; top: 62px; right: 32px; width: 185px; border-top: 1px solid rgba(255,255,255,0.2); background-color: rgba(0,0,0,0.5); text-align: left; }
+.player_wrap .set_wrap > li { position: relative; border-bottom: 1px solid rgba(255,255,255,0.2); overflow: hidden; }
+.player_wrap .set_wrap > li .dropdown { position: relative; display: block; margin: 7px 7px 10px 12px; }
+.player_wrap .set_wrap > li .txt { line-height: 19px; font-size: 13px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
+.player_wrap .set_wrap > li .txt_current { position: absolute; top: 0; right: 0; line-height: 19px; font-size: 0; font-weight: bold; letter-spacing: -0.47px; color: #917bff; padding-right: 24px; }
+.player_wrap .set_wrap > li .unfold .txt_current { font-size: 13px; }
 .player_wrap .set_wrap > li .txt_current:after { content: ''; position: absolute; top: 0; right: 0; width: 20px; height: 20px; background-image: url(../images/btn-player-unfold.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .player_wrap .set_wrap > li .unfold .txt_current:after { background-position: 0 100%; }
 .player_wrap .list_dropdown { display: none; border-top: 1px solid rgba(255,255,255,0.2); }
 .player_wrap .unfold ~ .list_dropdown { display: block; }
 .player_wrap .list_dropdown:after { clear: both; content: ''; display: block; }
 .player_wrap .list_dropdown ul { margin-left: -6px; }
-.player_wrap .list_dropdown li { float: left; margin-left: 22px; padding: 14px 0 16px; }
-.player_wrap .list_dropdown li > a { display: block; line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.47px; color: rgba(255,255,255,0.8); }
+.player_wrap .list_dropdown li { float: left; margin-left: 18px; padding: 8px 0; }
+.player_wrap .list_dropdown li > a { display: block; line-height: 17px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #ffffff; }
 .player_wrap .list_dropdown li > a.current { color: #917bff; }
 .player_wrap .btn_set.on ~ .set_wrap { display: block; }
-.player_wrap .top_area:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 90px; background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #000000); }
+.player_wrap .top_area:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 130px; background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); opacity: 0.6; }
 .player_wrap .center_area { position: relative; display: inline-block; vertical-align: middle; white-space: normal; }
 .player_wrap .bottom_area { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 58px 18px 62px; height: 130px; }
 .player_wrap .playerbar_wrap { position: relative; width: 100%; height: 22px; padding: 9px 0; }
@@ -393,7 +393,35 @@
 .fullplayer .player_wrap .member_video .btn_close { position: absolute; top: 20px; left: 22px; width: 26px; height: 26px; background-image: url(../images/ic-member-exit.png); background-size: 100%; }
 
 .fullplayer .player_wrap .member_video video  { object-fit: cover; }
-.fullplayer .player_wrap .top_area { display: block; }
+
+.fullplayer .player_wrap .top_area { display: block; position: absolute; top: 0; left: 0; right: 0; height: 90px; padding: 23px 160px 30px 30px; text-align: left; }
+.fullplayer .player_wrap .top_area .title { display: block; position: relative; line-height: 37px; font-size: 26px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
+.fullplayer .player_wrap .top_area .tg_live { margin-top: 5px; margin-right: 14px; vertical-align: top; display: inline-block; width: 63px; height: 30px; background-image: url(../images/img-tag-live-full.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.fullplayer .player_wrap .btn_set { position: absolute; top: 30px; right: 34px; width: 30px; height: 30px; }
+.fullplayer .player_wrap .btn_set .ic_set { position: absolute; top: 13px; left: 13px; width: 4px; height: 4px; background-color: #ffffff; }
+.fullplayer .player_wrap .btn_set .ic_set:before { content: ''; position: absolute; top: -8px; left: 0; width: 4px; height: 4px; background-color: inherit; }
+.fullplayer .player_wrap .btn_set .ic_set:after { content: ''; position: absolute; bottom: -8px; left: 0; width: 4px; height: 4px; background-color: inherit; }
+.fullplayer .player_wrap .btn_set:hover .ic_set { background-color: #917bff; }
+.fullplayer .player_wrap .btn_set.on .ic_set { background-color: #917bff; }
+.fullplayer .player_wrap .set_wrap { display: none; position: absolute; top: 90px; right: 50px; width: 230px; border-top: 1px solid rgba(255,255,255,0.2); background-color: transparent; }
+.fullplayer .player_wrap .set_wrap > li { position: relative; border-bottom: 1px solid rgba(255,255,255,0.2); overflow: hidden; }
+.fullplayer .player_wrap .set_wrap > li .dropdown { position: relative; display: block; margin: 15px 0 15px 5px; }
+.fullplayer .player_wrap .set_wrap > li .txt { line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
+.fullplayer .player_wrap .set_wrap > li .txt_current { position: absolute; top: -1px; right: -6px; line-height: 20px; font-size: 0; font-weight: bold; letter-spacing: -0.47px; color: #917bff; padding-right: 24px; }
+.fullplayer .player_wrap .set_wrap > li .unfold .txt_current { font-size: 14px; }
+.fullplayer .player_wrap .set_wrap > li .txt_current:after { content: ''; position: absolute; top: 0; right: 0; width: 20px; height: 20px; background-image: url(../images/btn-player-unfold.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.fullplayer .player_wrap .set_wrap > li .unfold .txt_current:after { background-position: 0 100%; }
+.fullplayer .player_wrap .list_dropdown { display: none; border-top: 1px solid rgba(255,255,255,0.2); }
+.fullplayer .player_wrap .unfold ~ .list_dropdown { display: block; }
+.fullplayer .player_wrap .list_dropdown:after { clear: both; content: ''; display: block; }
+.fullplayer .player_wrap .list_dropdown ul { margin-left: -6px; }
+.fullplayer .player_wrap .list_dropdown li { float: left; margin-left: 22px; padding: 14px 0 16px; }
+.fullplayer .player_wrap .list_dropdown li > a { display: block; line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.47px; color: rgba(255,255,255,0.8); }
+.fullplayer .player_wrap .list_dropdown li > a.current { color: #917bff; }
+.fullplayer .player_wrap .btn_set.on ~ .set_wrap { display: block; }
+.fullplayer .player_wrap .top_area:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 90px; background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #000000); opacity: 1; }
+
+
 .fullplayer #header,
 .fullplayer #footer,
 .fullplayer .col_chat,
