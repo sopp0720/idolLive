@@ -161,7 +161,7 @@
 #header { height: 4.6957rem; background-color: #f5f5f5; }
 .header_inner { position: relative; height: 4.6957rem; }
 .header_inner .logo { position: absolute; top: 1.4087rem; left: 2.3478rem; }
-.header_inner .logo > a { width: 9.5479rem; height: 1.7217rem; display: block; background-image: url(../images/logo_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.header_inner .logo > a { width: 9.5479rem; height: 1.7217rem; display: block; background-image: url(../images/logo_sm.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .header_inner .util { position: absolute; top: 0.6261rem; right: 1.0957rem; }
 .header_inner .util > a { float: left; width: 6.6522rem; height: 3.4435rem; padding: 0.8609rem 1.3304rem 1.0174rem 1.3304rem; text-align: right; line-height: 1.5652rem; font-size: 1.0957rem; font-weight: normal; letter-spacing: -0.0391rem; color: #131313; }
 .header_inner .util > a.active { color: #644bdf; }
