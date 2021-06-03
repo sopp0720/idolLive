@@ -19,7 +19,7 @@
 .flex_from [class*=btn_] { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; margin: 0; }
 .flex_from [class*=btn_] + [class*=btn_] { margin-top: 0.8609rem; }
 .btn_basic { position: relative; display: block; width: 100%; font-size: 0; height: 4.5392rem; border-radius: 0; background-color: #7e65ff; padding: 0.9391rem 1.7217rem 1.5652rem 1.6435rem; text-align: center; outline: none; }
-.btn_basic:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: 0.1565rem solid #000; }
+.btn_basic:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: 2px solid #000; }
 .btn_basic.active { background-color: #5c41e8; }
 .btn_basic .btn_txt { vertical-align: top; display: inline-block; font-size: 1.5652rem; line-height: 2.0348rem; font-weight: bold; color: #fff; letter-spacing: -0.0391rem; }
 .btn_basic.green { background-color: #2aa37a; }
@@ -32,7 +32,8 @@
 .btn_basic.disabled:before { display: none !important; }
 .btn_basic.disabled.active { background-color: #bfbfbf !important; }
 .btn_basic.disabled .btn_txt { color: rgba(0, 0, 0, 0.2) !important; }
-.btn_link { position: relative; display: block; width: 100%; font-size: 0; height: 4.6957rem; border-radius: 0; background-color: #f5f5f5; padding: 1.1739rem 3.9913rem 1.4087rem 4.6174rem; border: 0.1565rem solid #e5e5e5; text-align: left; outline: none; }
+.btn_link { position: relative; display: block; width: 100%; font-size: 0; height: 4.5392rem; border-radius: 0; background-color: #f5f5f5; padding: 1.2522rem 3.9913rem 1.487rem 4.6174rem; text-align: left; outline: none; }
+.btn_link:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: 2px solid #e5e5e5; }
 .btn_link .btn_txt { display: block; line-height: 1.8rem; font-size: 1.3304rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; }
 .btn_link.active .btn_txt { color: #7e65ff; }
 .btn_non_border { position: relative; margin: 0 0.6261rem; vertical-align: top; display: inline-block; width: calc(50% - 16px); font-size: 0; height: 4.3826rem; border: 0 none; border-radius: 0; background-color: #917bff; padding: 1.0174rem 1.5652rem 1.3304rem; text-align: center; outline: none; }
@@ -46,9 +47,9 @@
 .btn_non_border.gray.disabled .btn_txt { color: rgba(0, 0, 0, 0.3); }
 
 /* button icon */
-.btn_link .img_coupon { position: absolute; top: 1.0957rem; left: 1.4087rem; width: 2.0348rem; height: 2.0348rem; background-repeat: no-repeat; background-image: url(../images/img-coupon.png); background-size: 100% auto; }
+.btn_link .img_coupon { position: absolute; top: 1.2522rem; left: 1.5652rem; width: 2.0348rem; height: 2.0348rem; background-repeat: no-repeat; background-image: url(../images/img-coupon.png); background-size: 100% auto; }
 .btn_link.disabled .img_coupon { opacity: 0.3; }
-.btn_link .ic-arrow { position: absolute; top: 1.0957rem; right: 1.0174rem; width: 2.0348rem; height: 2.0348rem; background-repeat: no-repeat; background-image: url(../images/ic-arrow.png); background-size: 100%; }
+.btn_link .ic-arrow { position: absolute; top: 1.2522rem; right: 1.1739rem; width: 2.0348rem; height: 2.0348rem; background-repeat: no-repeat; background-image: url(../images/ic-arrow.png); background-size: 100%; }
 .btn_link.active .ic-arrow { background-position: 0 50%; }
 .btn_link.disabled .ic-arrow { background-position: 0 100%; }
 .btn_link.disabled .btn_txt { color: rgba(0, 0, 0, 0.3); }
@@ -471,7 +472,7 @@
 .fullplayer .player_wrap .ani_counting_full { top: 0; left: 0; right: 0; bottom: 6.6%; width: 52%; height: 66.6666%; margin: auto; }
 .fullplayer .player_wrap .ani_counting { right: -4%; bottom: 17%; width: 17.725%; height: 55.5555%; }
 .fullplayer .player_wrap .ic_heart { width: 54px; height: 54px; }
-.fullplayer .heart_wrap .txt_hit { bottom: 8%; right: 0.1%; line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
+.fullplayer .heart_wrap .txt_hit { width: 4.3%; bottom: 8%; right: 1.42%; line-height: 16px; font-family: 'Montserrat'; font-size: 13px; font-weight: 500; letter-spacing: -0.59px; color: #ffffff; }
 .fullplayer .player_wrap .btn_member { position: absolute; bottom: 0; left: auto; right: -82px; top: 0; margin: auto 0; width: 82px; height: 90px; border: solid 2px #000000; background-color: rgba(82, 255, 196, 0.95); padding: 56px 10px 10px 30px; line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; color: #000000; border-radius: 0; -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); }
 .fullplayer .player_wrap .btn_member:before { content: ''; position: absolute; top: 12px; right: 9px; width: 40px; height: 40px; background-image: url(../images/icon-member.png); background-size: 100%; }
 .fullplayer .player_wrap .btn_member:after { content: ''; position: absolute; top: 33px; left: 7px; width: 20px; height: 20px; background-image: url(../images/ic-arrow-member-fullplayer.png); background-size: 100%; }
