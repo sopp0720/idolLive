@@ -247,7 +247,7 @@
 .player_wrap .btn_play.on:hover { background-position: 0 100%; }
 .player_wrap .btn_speaker .ic_speaker { display: block; width: 1.5652rem; height: 1.5652rem; background-image: url(../images/ic_speaker_sm.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .player_wrap .btn_speaker:hover .ic_speaker { background-position: 0 100%; }
-.player_wrap .btn_speaker .ic_mute { display: block; width: 1.5652rem; height: 1.5652rem; background-image: url(../images/ic_mute_lg.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
+.player_wrap .btn_speaker .ic_mute { display: block; width: 1.5652rem; height: 1.5652rem; background-image: url(../images/ic_mute_sm.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .player_wrap .btn_speaker.active .ic_mute { background-position: 0 100%; }
 .player_wrap .btn_magnify { width: 1.5652rem; height: 1.5652rem; background-image: url(../images/ic_magnify_sm.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 .player_wrap .btn_magnify:hover { background-position: 0 100%; }
@@ -463,7 +463,7 @@
 .fullplayer .player_wrap { padding-top: 0; }
 .fullplayer .player_wrap .btn_play { width: 140px; height: 140px; background-image: url(../images/ic_play_pause_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_speaker { width: 30px; height: 30px; background-image: url(../images/ic_speaker_full.png); }
-.fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_lg.png); }
+.fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_full.png); }
 .fullplayer .player_wrap .volume_wrap { bottom: 32px; left: 32px; width: 30px; }
 .fullplayer .player_wrap .volumebar_wrap { width: 30px; padding: 0 13px; bottom: 36px; }
 .fullplayer .player_wrap .btn_magnify { bottom: 32px; right: 26px; width: 30px; height: 30px; background-image: url(../images/ic_magnify_full.png); }

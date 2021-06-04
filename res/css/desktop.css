@@ -433,7 +433,7 @@
 .fullplayer .player_wrap { padding-top: 0; }
 .fullplayer .player_wrap .btn_play { width: 140px; height: 140px; background-image: url(../images/ic_play_pause_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_speaker { width: 30px; height: 30px; background-image: url(../images/ic_speaker_full.png); }
-.fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_lg.png); }
+.fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_full.png); }
 .fullplayer .player_wrap .volume_wrap { bottom: 32px; left: 32px; width: 30px; }
 .fullplayer .player_wrap .volumebar_wrap { width: 30px; padding: 0 13px; bottom: 36px; }
 .fullplayer .player_wrap .btn_magnify { bottom: 32px; right: 26px; width: 30px; height: 30px; background-image: url(../images/ic_magnify_full.png); }
